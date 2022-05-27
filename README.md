@@ -2,8 +2,6 @@
 
 ![Image 1](https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/e8b95f2ec7573242aca79443761ba0b1f8edb006/images/logo-oneapi-rwd.png)
 
-This is DPC++ basic tutorial 
-
 ## What is DPC++ ?
 
 DPC++ is a project under Intel® oneAPI; it is Intel’s adaption / implementation of SYCL - an industry-driven standard that adds data parallelism to C++ for heterogeneous systems. It is a friendly relationship between C++, SYCL and added extensions (- such as Unified Shared Memory, use of sub-groups, e.t.c).
