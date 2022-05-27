@@ -26,5 +26,3 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 
 :heavy_check_mark: Data centric paradigm
 
-<h1 style=”color:red;”>Inline CSS in Red</h1>
-<p style=”font-family:Calibri"> This is a paragraph in yellow text color.</p>
