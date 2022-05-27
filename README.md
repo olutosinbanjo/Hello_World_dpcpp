@@ -11,11 +11,11 @@ DPC++ is a project under Intel® oneAPI; it is Intel’s adaption / implementati
 Therefore, learning DPC++ is simply learning ”data-parallel programming with C++, SYCL and some new extensions for - homogeneous and heterogeneous architectures - CPUs, GPUs, FPGAs, other accelerators, CPU-GPU, CPU-GPU-FPGA, CPU-FPGA”. 
 
 <p align="center">
-  <img width="" src="" alt="">
+  <img width="" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/16648134d58387077d3f5f11c1c1ef569e7256ac/images/Screenshot%20(471).png" alt="">
 </p>
 
 
-### Why you should embrace DPC++ 
+### :large_blue_diamond: Why you should embrace DPC++ 
 
 :heavy_check_mark: Accelerated Computing
 
