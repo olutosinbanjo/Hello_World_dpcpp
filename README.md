@@ -2,7 +2,7 @@
 
 <p align="centre">
   
-  ![Image 1](https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/a6638172061de817c164e59b1ba8a381c4746c34/images/logo-oneapi-resizepng.png)
+  <img width="200" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/a6638172061de817c164e59b1ba8a381c4746c34/images/logo-oneapi-resizepng.png" alt="Intel oneAPI logo">
 
 </p>
 
