@@ -1,5 +1,7 @@
 # HELLO WORLD! Data Parallel C++, DPC++
 
+![Image 1](https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/e8b95f2ec7573242aca79443761ba0b1f8edb006/images/logo-oneapi-rwd.png)
+
 This is DPC++ basic tutorial 
 
 ## What is DPC++ ?
