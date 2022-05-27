@@ -31,3 +31,5 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 
 :heavy_check_mark: Data centric paradigm
 
+For a detailed expansion of the points above, see this [article](https://medium.com/@olutosinbanjo/intel-oneapi-a-new-name-for-expressing-programming-across-multiple-architectures-17e2bce63bfe).
+
