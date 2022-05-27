@@ -15,7 +15,7 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 </p>
 
 
-### :large_blue_diamond: Why you should embrace DPC++ 
+## Why you should embrace DPC++ 
 
 :heavy_check_mark: Accelerated Computing
 
