@@ -1,6 +1,6 @@
 # HELLO WORLD! Data Parallel C++, DPC++
 
-<p align="centre">
+<p align="center">
   
   <img width="200" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/a6638172061de817c164e59b1ba8a381c4746c34/images/logo-oneapi-resizepng.png" alt="Intel oneAPI logo">
 
