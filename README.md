@@ -1,6 +1,6 @@
 # HELLO WORLD! Data Parallel C++, DPC++
 
-![Image 1](https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/a6638172061de817c164e59b1ba8a381c4746c34/images/logo-oneapi-resizepng.png))
+<div>![Image 1](https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/a6638172061de817c164e59b1ba8a381c4746c34/images/logo-oneapi-resizepng.png)</div>
 
 ## What is DPC++ ?
 
