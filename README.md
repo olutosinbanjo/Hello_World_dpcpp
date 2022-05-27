@@ -1,4 +1,5 @@
-# HELLO WORLD! Data Parallel C++, DPC++
+# The Basic Ideas of Data Parallel C++, DPC++
+*** ***
 
 <p align="center">
   <img width="500" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/54a0c12004b84aa333a6537e911d95500aca2c56/images/logo-oneapi-rwd.png" alt="Intel oneAPI logo">
@@ -15,7 +16,7 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 </p>
 
 
-## Why you should embrace DPC++ 
+## Features of DPC++ 
 
 :heavy_check_mark: Accelerated Computing
 
@@ -32,4 +33,27 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 :heavy_check_mark: Data centric paradigm
 
 For a detailed expansion of the points above, see section 1.2. in this [article](https://medium.com/@olutosinbanjo/intel-oneapi-a-new-name-for-expressing-programming-across-multiple-architectures-17e2bce63bfe).
+
+## Field Applications of DPC++
+
+1. High Performance Computing : [](https://www.sciencedirect.com/science/article/pii/S0743731522000727)
+
+2. Airtificial Intelligence : [Example in added support for Huawei AI chipset ](https://www.oneapi.io/community/huawei-extends-dpc-with-support-for-its-ascend-ai-chipset/)
+
+3. Mathematical, Numerical and Scientific Computing : [Example: High Performance Implementation of Boris Particle Pusher on DPC++](https://www.intel.com/content/www/us/en/developer/videos/implementation-of-boris-particle-pusher-on-dpcpp.html) ([Draft Paper](https://arxiv.org/abs/2104.04579)).
+
+4. Data Science : 
+
+6. Deep learning : [Example : Optimizing a deep learning framework for cancer research for Aurora](https://www.alcf.anl.gov/news/optimizing-deep-learning-framework-cancer-research-aurora)
+
+7. Machine Learning: [Example : Developing decision solvers for low power systems - robots](https://www.intel.com/content/www/us/en/developer/articles/success-story/oneapi-toolkits-machine-learning-algorithms-robots.html)
+
+***I would like to point out this interesting paper I found that evaluates the performance of DPC++ against CUDA* and OpenMP. It was worth my reading time! Brilliant work and its open source! [Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing](https://www.sciencedirect.com/science/article/pii/S0743731522000727)***
+
+
+
+
+# References
+
+[1] Germán Castaño, Youssef Faqir-Rhazoui, Carlos García and Manuel Prieto-Matías, "Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing", *Journal of Parallel and Distributed Computing*, 2022, Volume 165, Pages 120-129, ISSN 0743-7315, [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0743731522000727
 
