@@ -179,8 +179,33 @@ In this tutorial, we will be printing out the Hello World! statement; I Know it'
 
 **Hello World! = 'H' + 'e' + 'l' + 'l' + 'o' + ' ' + 'W' + 'o' + 'r' + 'l' + 'd' + '!'**
 
-Hello World! is a string value made up of 12 characters as seen above.
+Hello World! is a string value made up of 12 characters as seen above. 
 
+The image shown below g
+
+<p align="center">
+  
+  <img width="" src="" alt="Hello World!"
+       
+</p>
+
+
+    Let A be a container of the indexes of individual string values (total index = 12).
+
+    Let B be a team of threads, which is equal to the number of individual string values (total number of threads = 12).
+    
+    Let C, be the timing of thread finishes in an arbitrary unit of time, such that 1 = first thread to finish, 5 = 5th thread to finish, and so on.
+    
+    Let D, be the finish line.
+
+
+    Now, the threads are carriers of the string values and they have been assigned to the string values in an order of magnitude.
+    
+    The threads do not finish at the same time as indicated by C; but the expression 'wait' ensures that the string value is printing correctly. 
+    
+    That is, the string value is printed with respect to the index of the thread. 
+    
+   
 # References
 
 [1] Germán Castaño, Youssef Faqir-Rhazoui, Carlos García and Manuel Prieto-Matías, "Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing", *Journal of Parallel and Distributed Computing*, 2022, Volume 165, Pages 120-129, ISSN 0743-7315, [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0743731522000727
