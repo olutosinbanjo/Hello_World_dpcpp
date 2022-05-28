@@ -183,7 +183,7 @@ Hello World! is a string value made up of 12 characters as seen above.
 
 <p align="center">
   
-  <img width="" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/8e533795175bd02415bf2b9e90757a47e0d08fdc/images/Screenshot%20(605).png" alt="Hello World!">
+  <img width="" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/19da242acc8d01fe25253882bbb1332f7d3e0475/images/Screenshot%20(607).png" alt="Hello World!">
        
 </p>
 
