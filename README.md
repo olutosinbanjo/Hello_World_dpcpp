@@ -68,15 +68,19 @@ Having signed up for a free devcloud account: please do the following:
 
 ## With git clone - DevCloud 
 
-On your local terminal (linux, cygwin, mingw64, e.t.c), communicate with your remote devcloud account (terminal - programming and runtime environment) :
+         >> On your local terminal (linux, cygwin, mingw64, e.t.c), communicate with your remote devcloud account (terminal - programming and runtime environment) :
 
          local-terminal $ ssh devcloud
+         
+         >> git colne repository
 
          login-node     $ git clone https://github.com/olutosinbanjo/Hello_World_dpcpp.git 
           
           ***OR***
           
          login-node     $ git clone git@github.com:olutosinbanjo/Hello_World_dpcpp.git
+         
+         >> change directory to repository folder
           
          login-node     $ cd Hello_World_dpcpp-main
           
@@ -109,19 +113,29 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
           
 ## Without git clone - DevCloud
 
+          >> download zip folder from github.com
+          
           local-terminal  $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
           
-          local-terminal  $ open terminal (for Windows / Linux)
+          >> open terminal (for Windows / Linux)
           
-          local-terminal  $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
+          >> change directory to where you have downloaded the zipped folder for the repository. Using WSL for example
           
           local-terminal  $ cd /mnt/c/users/username/downloads/ 
           
+          >> send local file (downloaded zip file) to remote devcloud account
+          
           local-terminal  $ scp Hello_World_dpcpp-main.zip devcloud:~/
+          
+          >> login to devcloud account 
           
           local-terminal  $ ssh devcloud
           
+          >> unzip zipped file 
+          
           login-node      $ unzip Hello_World_dpcpp-main.zip
+          
+          >> change directory to extracted folder of zipped file
           
           login-node      $ cd Hello_World_dpcpp-main
           
@@ -131,23 +145,23 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
           
           >> Clean directory
          
-         compute-node   $ ./clean-main.sh
+          compute-node   $ ./clean-main.sh
          
-         >> build source files
+          >> build source files
           
-         compute-node   $ ./build-main.sh
+          compute-node   $ ./build-main.sh
          
-         >> execute object files
+          >> execute object files
           
-         compute-node   $ cd bin
+          compute-node   $ cd bin
           
-         compute-node   $ ./executable
+          compute-node   $ ./executable
          
-         >> clean directory
+          >> clean directory
           
-         compute-node   $ cd ..
+          compute-node   $ cd ..
          
-         compute-node   $ ./clean-main.sh
+          compute-node   $ ./clean-main.sh
           
           
 
