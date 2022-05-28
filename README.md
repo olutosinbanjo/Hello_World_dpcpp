@@ -36,15 +36,15 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 
 ## Some Domain Specific Applications of DPC++
 
-1. High Performance Computing : [Example: Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing (Rodinia Application Benchmark suite)](https://www.sciencedirect.com/science/article/pii/S0743731522000727) (see also example in 3 below)
+:white_check_mark: High Performance Computing : [Example: Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing (Rodinia Application Benchmark suite)](https://www.sciencedirect.com/science/article/pii/S0743731522000727) (see also example in 3 below)
 
-2. Airtificial Intelligence : [Example in added support for Huawei AI chipset ](https://www.oneapi.io/community/huawei-extends-dpc-with-support-for-its-ascend-ai-chipset/)
+:white_check_mark: Airtificial Intelligence : [Example in added support for Huawei AI chipset ](https://www.oneapi.io/community/huawei-extends-dpc-with-support-for-its-ascend-ai-chipset/)
 
-3. Mathematical, Numerical and Scientific Computing : [Example: High Performance Implementation of Boris Particle Pusher on DPC++](https://www.intel.com/content/www/us/en/developer/videos/implementation-of-boris-particle-pusher-on-dpcpp.html) ([Draft Paper](https://arxiv.org/abs/2104.04579)).
+:white_check_mark: Mathematical, Numerical and Scientific Computing : [Example: High Performance Implementation of Boris Particle Pusher on DPC++](https://www.intel.com/content/www/us/en/developer/videos/implementation-of-boris-particle-pusher-on-dpcpp.html) ([Draft Paper](https://arxiv.org/abs/2104.04579)).
 
-4. Deep learning : [Example : Optimizing a deep learning framework for cancer research for Aurora](https://www.alcf.anl.gov/news/optimizing-deep-learning-framework-cancer-research-aurora)
+:white_check_mark: Deep learning : [Example : Optimizing a deep learning framework for cancer research for Aurora](https://www.alcf.anl.gov/news/optimizing-deep-learning-framework-cancer-research-aurora)
 
-5. Machine Learning: [Example : Developing decision solvers for low power systems - robots](https://www.intel.com/content/www/us/en/developer/articles/success-story/oneapi-toolkits-machine-learning-algorithms-robots.html)
+:white_check_mark: Machine Learning: [Example : Developing decision solvers for low power systems - robots](https://www.intel.com/content/www/us/en/developer/articles/success-story/oneapi-toolkits-machine-learning-algorithms-robots.html)
 
 ***I would like to point out this interesting paper I found that evaluates the performance of DPC++ against CUDA* and OpenMP. It was worth my reading time! Brilliant work and its open source! - [Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing](https://www.sciencedirect.com/science/article/pii/S0743731522000727)***
 
