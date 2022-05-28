@@ -5,6 +5,6 @@ echo "Creating "bin" directory for executables..."
 mkdir bin
 echo "Created "bin" directory for executables" 
 make -f makefile
-mv usm* buf* ~/HELLO/bin
+mv usm* buf* ~/Hello_World_dpcpp-main/bin
 echo "Executables are now in "bin" directory"
 echo "Enter cd bin"
