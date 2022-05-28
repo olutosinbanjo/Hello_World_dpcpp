@@ -185,7 +185,7 @@ The image shown below g
 
 <p align="center">
   
-  <img width="" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/8e533795175bd02415bf2b9e90757a47e0d08fdc/images/Screenshot%20(605).png" alt="Hello World!"
+  <img width="" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/8e533795175bd02415bf2b9e90757a47e0d08fdc/images/Screenshot%20(605).png" alt="Hello World!">
        
 </p>
 
