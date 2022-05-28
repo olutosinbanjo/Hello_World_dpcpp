@@ -59,7 +59,8 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 
 ⚫ Intel® oneAPI Base Toolkit on Intel® DevCloud
 
-1. Sign up for a free Intel DevCloud Account [here](https://www.intel.com/content/www/us/en/forms/idz/devcloud-registration.html?tgt=https://www.intel.com/content/www/us/en/secure/forms/devcloud-enrollment/account-provisioning.html) (Free access for 120 days with the possibility of an extension).
+
+To access the Intel® oneAPI Base Toolkit on Intel® DevCloud, sign up for a free Intel DevCloud Account [here](https://www.intel.com/content/www/us/en/forms/idz/devcloud-registration.html?tgt=https://www.intel.com/content/www/us/en/secure/forms/devcloud-enrollment/account-provisioning.html) (Free access for 120 days with the possibility of an extension).
 
 The DevCloud is a free remote development environment for learning about and programming oneAPI cross-architecture applications; it is equipped with the latest Intel CPUs, GPUs, FPGAs, and Intel oneAPI tools.
 
@@ -168,6 +169,15 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
           compute-node   $ ./clean-main.sh
           
           
+          
+# Let's get to work!
+
+In this tutorial, we will be printing out the Hello World! statement; I Know it's pretty naive for a data parallel programming model. But Hello World! is data, and we simply want to get started with something really simple.
+
+
+## HELLO WORLD! from a data parallel perspective
+
+HELLO WORLD! = H + E + L + L + O + ' ' + W + O + R + L + D
 
 # References
 
