@@ -5,6 +5,7 @@
   <img width="500" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/54a0c12004b84aa333a6537e911d95500aca2c56/images/logo-oneapi-rwd.png" alt="Intel oneAPI logo">
 </p>
 
+
 ## What is DPC++ ?
 
 DPC++ is a project under Intel® oneAPI; it is Intel’s adaption / implementation of SYCL - an industry-driven standard that adds data parallelism to C++ for heterogeneous systems. It is a friendly relationship between C++, SYCL and added extensions (- such as Unified Shared Memory, use of sub-groups, e.t.c).
@@ -34,6 +35,7 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 
 For a detailed expansion of the points above, see section 1.2. in this [article](https://medium.com/@olutosinbanjo/intel-oneapi-a-new-name-for-expressing-programming-across-multiple-architectures-17e2bce63bfe).
 
+
 ## Some Domain Specific Applications of DPC++
 
 :white_check_mark: High Performance Computing : [Example: Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing (Rodinia Application Benchmark suite)](https://www.sciencedirect.com/science/article/pii/S0743731522000727) (see also example in 3 below)
@@ -48,6 +50,7 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 
 ***I would like to point out this interesting paper I found that evaluates the performance of DPC++ against CUDA* and OpenMP. It was worth my reading time! Brilliant work and its open source! - [Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing](https://www.sciencedirect.com/science/article/pii/S0743731522000727)***
 
+
 # Tools for Following this tutorial
 
 ⚫ A Computer
@@ -61,6 +64,7 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 The DevCloud is a free remote development environment for learning about and programming oneAPI cross-architecture applications; it is equipped with the latest Intel CPUs, GPUs, FPGAs, and Intel oneAPI tools.
 
 Please note that: You can also set up the Intel® oneAPI Base Toolkit on your computer by downloading the installer from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit)
+
 
 # Following the tutorial
 
@@ -115,7 +119,7 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
 
           >> download zip folder from github.com
           
-          local-terminal  $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
+          local-terminal  $ download zip folder of this repository to your local computer (Hello_World_dpcpp-main.zip)
           
           >> open terminal (for Windows / Linux)
           
