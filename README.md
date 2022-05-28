@@ -80,16 +80,31 @@ On your local terminal (linux, cygwin, mingw64, e.t.c), communicate with your re
           
          login-node     $ cd Hello_World_dpcpp-main
           
-         $ Request for a gpu computational node to access the Intel® Xeon® E-2176G CPU and its integrated graphics - Intel® UHD Graphics P630 [0x3e96]embedded P360 GPU
+         >> Request for a gpu computational node to access the Intel® Xeon® E-2176G CPU and its integrated graphics - Intel® UHD Graphics P630 [0x3e96]embedded P360 GPU
          
          login-node     $ qsub -I -l nodes=1:gpu:ppn=2 -d .
+         
+         >> Clean directory
+         
+         compute-node   $ ./clean.sh
+         
+         >> build source files
           
          compute-node   $ ./build.sh
+         
+         >> execute object files
           
          compute-node   $ cd bin
           
          compute-node   $ ./executable
+         
+         >> clean directory
           
+         compute-node   $ cd ..
+         
+         compute-node   $ ./clean.sh
+         
+         
 Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/www/us/en/products/sku/134860/intel-xeon-e2176g-processor-12m-cache-up-to-4-70-ghz/specifications.html).
           
 ## Without git clone - DevCloud
@@ -110,13 +125,29 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
           
           login-node      $ cd Hello_World_dpcpp-main
           
-          $ Request for a gpu computational node: qsub -I -l nodes=1:gpu:ppn=2 -d .
+          >> Request for a gpu computational node
           
-          compute-node    $ ./build.sh
+          login-node     $ qsub -I -l nodes=1:gpu:ppn=2 -d .
           
-          compute-node    $ cd bin
+          >> Clean directory
+         
+         compute-node   $ ./clean-main.sh
+         
+         >> build source files
           
-          compute-node    $ ./executable
+         compute-node   $ ./build-main.sh
+         
+         >> execute object files
+          
+         compute-node   $ cd bin
+          
+         compute-node   $ ./executable
+         
+         >> clean directory
+          
+         compute-node   $ cd ..
+         
+         compute-node   $ ./clean-main.sh
           
           
 
