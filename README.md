@@ -175,13 +175,11 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
 In this tutorial, we will be printing out the Hello World! statement; I Know it's pretty naive for a data parallel programming model. But Hello World! is data, and we simply want to get started with something really simple.
 
 
-## Hello World! from a data parallel perspective
+## Hello World! from a parallel perspective
 
 **Hello World! = 'H' + 'e' + 'l' + 'l' + 'o' + ' ' + 'W' + 'o' + 'r' + 'l' + 'd' + '!'**
 
 Hello World! is a string value made up of 12 characters as seen above. 
-
-The image shown below g
 
 <p align="center">
   
@@ -189,21 +187,22 @@ The image shown below g
        
 </p>
 
+From the inmage shown above,
 
     Let A be a container of the indexes of individual string values (total index = 12).
 
     Let B be a team of threads, which is equal to the number of individual string values (total number of threads = 12).
     
     Let C, be the timing of thread finishes in an arbitrary unit of time, such that 1 = first thread to finish, 5 = 5th thread to finish, and so on.
-    
-    Let D, be the finish line.
 
 
     Now, the threads are carriers of the string values and they have been assigned to the string values in an order of magnitude.
     
-    The threads do not finish at the same time as indicated by C; but the expression 'wait' ensures that the string value is printing correctly. 
+    The threads do not finish at the same time as indicated by C; but the expression 'WAIT' ensures that the string value is printing correctly. 
     
-    That is, the string value is printed with respect to the index of the thread. 
+    That is, the string value is printed with respect to the index of the thread and not with respect to the timing of thread finishes. 
+    
+> The Threads carrying the string values could get to the RED line in any order, but the "WAIT" expression exnsures correct ordering of thread Indexes.
     
    
 # References
