@@ -54,86 +54,69 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 
 ⚫ Reliable Internet Connection
 
-⚫ Intel® oneAPI Base Toolkit
+⚫ Intel® oneAPI Base Toolkit on Intel® DevCloud
 
-To follow this tutorial you can either - 
+1. Sign up for a free Intel DevCloud Account [here](https://www.intel.com/content/www/us/en/forms/idz/devcloud-registration.html?tgt=https://www.intel.com/content/www/us/en/secure/forms/devcloud-enrollment/account-provisioning.html) (Free access for 120 days with the possibility of an extension).
 
-1. Set up the Intel® oneAPI Base Toolkit on your computer by downloading the installer from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit)
+The DevCloud is a free remote development environment for learning about and programming oneAPI cross-architecture applications; it is equipped with the latest Intel CPUs, GPUs, FPGAs, and Intel oneAPI tools.
 
-*OR*
-
-2. If your computer is not suited for installing the Base Toolkit (due to memory storage, and other reasons) or you simply do not want to go through an installation process; then you can sign up for a free Intel DevCloud Account [here](https://www.intel.com/content/www/us/en/forms/idz/devcloud-registration.html?tgt=https://www.intel.com/content/www/us/en/secure/forms/devcloud-enrollment/account-provisioning.html)
-
-The DevCloud is a free remote development environment for learning about and programming oneAPI cross-architecture applications ; it is equipped with the latest Intel CPUs, GPUs, FPGAs, and Intel oneAPI tools.
+Please note that: You can also set up the Intel® oneAPI Base Toolkit on your computer by downloading the installer from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit)
 
 # Following the tutorial
 
-Having done steps 1 or 2 above, run the following commands: 
+Having signed up for a free devcloud account: please do the following: 
 
-## On your terminal (linux, cygwin, mingw64, e.t.c)  / devcloud terminal using git clone 
+## With git clone - DevCloud 
 
-(terminal - programming and runtime environment)
+On your local terminal (linux, cygwin, mingw64, e.t.c), communicate with your remote devcloud account (terminal - programming and runtime environment) :
 
-          $ git clone https://github.com/olutosinbanjo/Hello_World_dpcpp.git 
+         local-terminal $ ssh devcloud
+
+         login-node     $ git clone https://github.com/olutosinbanjo/Hello_World_dpcpp.git 
           
           ***OR***
           
-          $ git clone git@github.com:olutosinbanjo/Hello_World_dpcpp.git
+         login-node     $ git clone git@github.com:olutosinbanjo/Hello_World_dpcpp.git
           
-          $ cd Hello_World_dpcpp-main
+         login-node     $ cd Hello_World_dpcpp-main
           
-          $ (On devcloud request for a gpu computational node): qsub -I -l nodes=1:gpu:ppn=2 -d .
+         $ Request for a gpu computational node to access the Intel® Xeon® E-2176G CPU and its integrated graphics - Intel® UHD Graphics P630 [0x3e96]embedded P360 GPU
+         
+         login-node     $ qsub -I -l nodes=1:gpu:ppn=2 -d .
           
-          $ ./build.sh
+         compute-node   $ ./build.sh
           
-          $ cd bin
+         compute-node   $ cd bin
           
-          $ ./executable
+         compute-node   $ ./executable
           
-          
-## Without git clone - Personal computer with installed Base Toolkit
-
-          $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
-          
-          $ open terminal  (for Windows / Linux)
-          
-          $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
-          
-          $ cd /mnt/c/users/username/downloads/ 
-          
-          $ unzip Hello_World_dpcpp-main.zip
-          
-          $ cd Hello_World_dpcpp
-          
-          $ ./build.sh
-          
-          $ cd bin
-          
-          $ ./executable
+Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/www/us/en/products/sku/134860/intel-xeon-e2176g-processor-12m-cache-up-to-4-70-ghz/specifications.html).
           
 ## Without git clone - DevCloud
 
-          $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
+          local-terminal  $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
           
-          $ open terminal (for Windows / Linux)
+          local-terminal  $ open terminal (for Windows / Linux)
           
-          $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
+          local-terminal  $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
           
-          $ cd /mnt/c/users/username/downloads/ 
+          local-terminal  $ cd /mnt/c/users/username/downloads/ 
           
-          $ scp Hello_World_dpcpp-main.zip devcloud:~/
+          local-terminal  $ scp Hello_World_dpcpp-main.zip devcloud:~/
           
-          $ unzip Hello_World_dpcpp-main.zip
+          local-terminal  $ ssh devcloud
           
-          $ cd Hello_World_dpcpp-main
+          login-node      $ unzip Hello_World_dpcpp-main.zip
+          
+          login-node      $ cd Hello_World_dpcpp-main
           
           $ Request for a gpu computational node: qsub -I -l nodes=1:gpu:ppn=2 -d .
           
-          $ ./build.sh
+          compute-node    $ ./build.sh
           
-          $ cd bin
+          compute-node    $ cd bin
           
-          $ ./executable
+          compute-node    $ ./executable
           
           
 
