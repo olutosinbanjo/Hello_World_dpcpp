@@ -78,9 +78,11 @@ Having done steps 1 or 2 above, run the following commands:
           
           ***OR***
           
-          $ git clone git@github:olutosinbanjo/Hello_World_dpcpp.git
+          $ git clone git@github.com:olutosinbanjo/Hello_World_dpcpp.git
           
-          $ cd Hello_World_dpcpp
+          $ cd Hello_World_dpcpp-main
+          
+          $ (On devcloud request for a gpu computational node): qsub -I -l nodes=1:gpu:ppn=2 -d .
           
           $ ./build.sh
           
@@ -99,7 +101,7 @@ Having done steps 1 or 2 above, run the following commands:
           
           $ cd /mnt/c/users/username/downloads/ 
           
-          $ unzip Hello_World_dpcpp.zip
+          $ unzip Hello_World_dpcpp-main.zip
           
           $ cd Hello_World_dpcpp
           
@@ -113,23 +115,19 @@ Having done steps 1 or 2 above, run the following commands:
 
           $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
           
-          $ open terminal A (for Windows / Linux) 
-          
-          $ ssh devcloud
-          
-          $ open another terminal B
+          $ open terminal (for Windows / Linux)
           
           $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
           
           $ cd /mnt/c/users/username/downloads/ 
           
-          $ scp Hello_World_dpcpp.zip devcloud:~/
+          $ scp Hello_World_dpcpp-main.zip devcloud:~/
           
-          $ on terminal A (DevCloud)
+          $ unzip Hello_World_dpcpp-main.zip
           
-          $ unzip Hello_World_dpcpp.zip
+          $ cd Hello_World_dpcpp-main
           
-          $ cd Hello_World_dpcpp
+          $ Request for a gpu computational node: qsub -I -l nodes=1:gpu:ppn=2 -d .
           
           $ ./build.sh
           
