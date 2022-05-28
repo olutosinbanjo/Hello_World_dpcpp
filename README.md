@@ -187,7 +187,7 @@ Hello World! is a string value made up of 12 characters as seen above.
        
 </p>
 
-From the inmage shown above,
+From the image shown above,
 
     Let A be a container of the indexes of individual string values (total index = 12).
 
@@ -202,7 +202,7 @@ From the inmage shown above,
     
     That is, the string value is printed with respect to the index of the thread and not with respect to the timing of thread finishes. 
     
-> The Threads carrying the string values could get to the RED line in any order, but the "WAIT" expression exnsures correct ordering of thread Indexes.
+> The Threads carrying the string values could get to the RED line in any order (due to different timingso of thread finishes), but the "WAIT" expression exnsures correct ordering of thread Indexes. Computations that  More paralell computations: Vector-Vector addition , MatrixvVector multiplication, Matrix-Matrix Multiplication
     
    
 # References
