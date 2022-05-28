@@ -50,9 +50,94 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 
 # Tools for Following this tutorial
 
-*hhhh
-*jjjj
+⚫ A Computer
 
+⚫ Reliable Internet Connection
+
+⚫ Intel® oneAPI Base Toolkit
+
+To follow this tutorial you can either - 
+
+1. Set up the Intel® oneAPI Base Toolkit on your computer by downloading the installer from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit)
+
+*OR*
+
+2. If your computer is not suited for installing the Base Toolkit (due to memory storage, and other reasons) or you simply do not want to go through an installation process; then you can sign up for a free Intel DevCloud Account [here](https://www.intel.com/content/www/us/en/forms/idz/devcloud-registration.html?tgt=https://www.intel.com/content/www/us/en/secure/forms/devcloud-enrollment/account-provisioning.html)
+
+The DevCloud is a free remote development environment for learning about and programming oneAPI cross-architecture applications ; it is equipped with the latest Intel CPUs, GPUs, FPGAs, and Intel oneAPI tools.
+
+# Following the tutorial
+
+Having done steps 1 or 2 above, run the following commands: 
+
+## On your terminal (linux, cygwin, mingw64, e.t.c)  / devcloud terminal using git clone 
+
+(terminal - programming and runtime environment)
+
+          $ git clone https://github.com/olutosinbanjo/Hello_World_dpcpp.git 
+          
+          ***OR***
+          
+          $ git clone git@github:olutosinbanjo/Hello_World_dpcpp.git
+          
+          $ cd Hello_World_dpcpp
+          
+          $ ./build.sh
+          
+          $ cd bin
+          
+          $ ./executable
+          
+          
+## Without git clone - Personal computer with installed Base Toolkit
+
+          $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
+          
+          $ open terminal  (for Windows / Linux)
+          
+          $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
+          
+          $ cd /mnt/c/users/username/downloads/ 
+          
+          $ unzip Hello_World_dpcpp.zip
+          
+          $ cd Hello_World_dpcpp
+          
+          $ ./build.sh
+          
+          $ cd bin
+          
+          $ ./executable
+          
+## Without git clone - DevCloud
+
+          $ download zip folder of this repository to your local computer (Hello_World_dpcpp.zip)
+          
+          $ open terminal A (for Windows / Linux) 
+          
+          $ ssh devcloud
+          
+          $ open another terminal B
+          
+          $ change directory to where you have downloaded the zipped folder for the repository. Using WSL for example : 
+          
+          $ cd /mnt/c/users/username/downloads/ 
+          
+          $ scp Hello_World_dpcpp.zip devcloud:~/
+          
+          $ on terminal A (DevCloud)
+          
+          $ unzip Hello_World_dpcpp.zip
+          
+          $ cd Hello_World_dpcpp
+          
+          $ ./build.sh
+          
+          $ cd bin
+          
+          $ ./executable
+          
+          
 
 # References
 
