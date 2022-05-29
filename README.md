@@ -189,9 +189,13 @@ Hello World! is a string value made up of 12 characters as seen above.
 
 From the image shown above,
 
-    Let A be a container of the indexes of individual string values (total index = 12).
+    i = number of iterations; 
 
-    Let B be a team of threads, which is equal to the number of individual string values (total number of threads = 12).
+    Let A be the source container of the individual string values.
+    
+    Let B be the destination container of the copied individual string values.
+
+    Let x be a team of threads, which is equal to the number of individual string values (total number of threads = 12).
     
     Let C, be the timing of thread finishes in an arbitrary unit of time, such that 1 = first thread to finish, 5 = 5th thread to finish, and so on.
 
