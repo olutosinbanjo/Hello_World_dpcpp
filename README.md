@@ -175,7 +175,7 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
 In this tutorial, we will be printing out the Hello World! statement; I Know it's pretty naive for a data parallel programming model. But Hello World! is data, and we simply want to get started with something really simple.
 
 
-## Hello World! from a parallel perspective
+## Hello World! from a parallel perspective - ARRAY COPY
 
 **Hello World! = 'H' + 'e' + 'l' + 'l' + 'o' + ' ' + 'W' + 'o' + 'r' + 'l' + 'd' + '!'**
 
