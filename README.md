@@ -181,6 +181,18 @@ In this tutorial, we will be printing out the Hello World! statement; I Know it'
 
 Hello World! is a string value made up of 12 characters as seen above. 
 
+
+### A Fun Way of Explaining
+
+**Assumptions:**
+
+1. Let position A represent a container having 12 boxes; each box has an inscription of the individual letters of the string value *Hello World!*
+2. Let another position B represent a container 5cm away from position A.
+3. Let the moving distance from position A to position B and vice-versa be 1 unit of time.
+
+**Task**
+
+
 <p align="center">
   
   <img width="" src="https://github.com/olutosinbanjo/Hello_World_dpcpp/blob/19da242acc8d01fe25253882bbb1332f7d3e0475/images/Screenshot%20(607).png" alt="Hello World!">
