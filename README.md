@@ -71,7 +71,7 @@ Please note that: You can also set up the Intel® oneAPI Base Toolkit on your co
 
 Having signed up for a free devcloud account: please do the following: 
 
-(*To know how to configure the DevCloud to use HTTPS and SSH for git clone, please check this article: [Cloning a git repository hosted on github.com or gitlab.com in Intel® DevCloud](https://devmesh.intel.com/post/1025129/cloning-a-git-repository-hosted-on-github-com-or-gitlab-com-in-intel-devcloud)*.
+(*To know how to configure the DevCloud to use HTTPS and SSH for git clone, please check this article: [Cloning a git repository hosted on github.com or gitlab.com in Intel® DevCloud](https://devmesh.intel.com/post/1025129/cloning-a-git-repository-hosted-on-github-com-or-gitlab-com-in-intel-devcloud))*.
 
 ## 3.1. With git clone - DevCloud 
 
