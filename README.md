@@ -241,16 +241,19 @@ Then:
   ✔️ If there are 12 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
   
 
-🤓 **What did we learn**
 
-1. The more the persons the lesser amount of time it takes to complete the task. 
+🤓 **What did we learn**
+---
+
+   1. The more the persons the lesser amount of time it takes to complete the task. 
 > Persons here represent resources in parallel programming - CPU cores, GPU cores, heterogeneous processors.
 
-2. The assignment of a leader if n > 1 ensures coordination of the team.
+   2. The assignment of a leader if n > 1 ensures coordination of the team.
 > In parallel programming, this is called synchronization. Synchronization is usually performed by designated clauses, for example - ".wait()" in DPC++, "#pragma omp barrier" in OpenMP, e.t.c.
 
-3. Idleness of resources adds an additional cost to task completion time. We see this in Condition 1, when 9 persons are used. 
-From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B (Idleness), while 3 persons return to position A, to move *ld!* to position B.
+   3. Idleness of resources adds an additional cost to task completion time. We see this in Condition 1, when 9 persons are used. 
+      From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B (Idleness), while 3 persons return to position A, to move *ld!* to
+      position B.
 > In parallel programming, overcoming idleness, that is, getting every resource to always have a task to perform saves a lot of execution time.
 
 
