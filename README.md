@@ -6,7 +6,9 @@
 </p>
 
 # Contents
-**[What is DPC++ ?](#what-is-dpc++-?)**<br>
+**[1.0. What is DPC++ ?](#what-is-dpc++-?)**<br>
+**[1.1. Features of DPC++ ](##features-of-dpc++)**<br>
+**[1.2. Some Domain Specific Applications of DPC++](##some-dpmain_specific-applications-of-dpc++)**<br>
 
 # 1.0. What is DPC++ ?
 
