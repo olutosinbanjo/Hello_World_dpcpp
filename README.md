@@ -181,8 +181,7 @@ In this tutorial, we will be printing out the Hello World! statement; I Know it'
 
 Hello World! is a string value made up of 12 characters as seen above. 
 
-
-🔷 ### A Fun Way of Explaining
+### 🔷 A Fun Way of Explaining
 
 🤓 **Assumptions:**
 
@@ -204,8 +203,11 @@ Hello World! is a string value made up of 12 characters as seen above.
 Then:
 
 ✔️ If there is only 1 person, the task will take 23UsT for COPY + 1UT for WT + 1UT for SHT  = 25 UsT.
+
 ✔️ If there are 6 persons, the task will take 13UsT for COPY + 1UT for WT + 1UT for SHT = 15UsT.
+
 ✔️ If there are 9 persons, the task will take 7UsT for COPY + 1UT for ID + 1UT for WT + 1UT for SHT = 10UsT.
+
 ✔️ If there are 12 persons, the task will take 1UT for COPY + 1UT for WT + 1UT for SHT = 3UsT.
 
 
@@ -214,18 +216,24 @@ Then:
 Then:
 
 ✔️ If there is only 1 person, the task will take 11UsT for COPY + 1UT for WT + 1UT for SHT  = 13 UsT.
+
 ✔️ If there are 6 persons, the task will take 6UsT for COPY + 1UT for WT + 1UT for SHT = 8UsT.
+
 ✔️ If there are 9 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
+
 ✔️ If there are 12 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
 
-🔷 ### What did we learn
+### 🔷 What did we learn
 
 1. The more the persons the lesser amount of time it takes to complete the task. 
 >> Persons here represent resources in parallel programming - CPU cores, GPU cores, heterogeneous processors.
+
 2. The assignment of a leader if n > 1 ensures coordination of the team.
->> In parallel programming, this is called synchronization. 
+>> In parallel programming, this is called synchronization. Synchronization is usually performed by designated clauses, for example - ".wait()" in DPC++, "#pragma omp barrier" in OpenMP, e.t.c.
+
 3. Idleness of resources adds an additional cost to task completion time. We see this in Condition 1, when 9 persons are used. 
-From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B, while 3 persons return to position A, to move *ld!* to position B. 
+From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B (Idleness), while 3 persons return to position A, to move *ld!* to position B.
+>> In parallel programming, overcoming idleness, that is, getting every resource to always have a task to perform saves a lot of execution time.
 
 
 <p align="center">
