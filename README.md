@@ -309,7 +309,7 @@ From the image shown above,
   
   2. The threads are carriers of the iteration index, which in turn are readers of the string values stored in source container A.
   
-  <--! Readers - what helps us access the individual elements in th array-->
+  <!-- Readers - what helps us access the individual elements in th array-->
 
     Now, the threads are carriers of the string values and they have been assigned to the string values in an order of magnitude.
     
