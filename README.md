@@ -185,54 +185,57 @@ Hello World! is a string value made up of 12 characters as seen above.
 
 ### 4.1.1. 🔷 A Fun Way of Explaining
 
-🤓 <u> **Assumptions:** </u>
+🤓 **<u>Assumptions:</u>**
 
-1. Let position A represent a container having 12 boxes; each box has an inscription of the individual letters of the string value *Hello World!*; also, the arrangements of each box are in the same order as the string value *Hello World!*
+   1. Let position A represent a container having 12 boxes; each box has an inscription of the individual letters of the string value *Hello World!*; also, the 
+   arrangements of each box are in the same order as the string value *Hello World!*
 
-2. Let another position B represent a container 5cm away from position A.
+   2. Let another position B represent a container 5cm away from position A.
 
-3. Let the moving distance from position A to position B and vice-versa be 1 unit of time (call this 1UT, if UT > 1 use UsT).
+   3. Let the moving distance from position A to position B and vice-versa be 1 unit of time (call this 1UT, if UT > 1 use UsT).
 
-4. Let any other task - shouting (SHT), waiting (WT), Idle (ID)  take 1 unit of time respectively.
+   4. Let any other task - shouting (SHT), waiting (WT), Idle (ID)  take 1 unit of time respectively.
 
-5. Let the movement from position A to position B be called a **COPY**
+   5. Let the movement from position A to position B be called a **COPY**
 
-🤓 <u> **Task** </u>
+🤓 **<u>Task</u>** 
 
-1. Assign, *n*, number of persons to move all boxes in position A to position B; at position B, the boxes will be in the same order as the string value *Hello World!*.
+   1. Assign, *n*, number of persons to move all boxes in position A to position B; at position B, the boxes will be in the same order as the string value *Hello 
+   World!*.
 
-2. If *n* > 1, let a leader be assigned, so that there is a team.
+   2. If *n* > 1, let a leader be assigned, so that there is a team.
 
-3. If n == 1, at position B, let n shout *Hello World!* after arranging the boxes.
+   3. If n == 1, at position B, let n shout *Hello World!* after arranging the boxes.
 
-4. If *n* > 1, at position B, on the call of the leader of the team, let the team after arranging the boxes shout *Hello World!*.
-
-
-🤓 <u> **Condition 1 : Only one box can be moved at a time** </u>
-
-Then:
-
-✔️ If there is only 1 person, the task will take 23UsT for COPY + 1UT for WT + 1UT for SHT  = 25 UsT.
-
-✔️ If there are 6 persons, the task will take 13UsT for COPY + 1UT for WT + 1UT for SHT = 15UsT.
-
-✔️ If there are 9 persons, the task will take 7UsT for COPY + 1UT for ID + 1UT for WT + 1UT for SHT = 10UsT.
-
-✔️ If there are 12 persons, the task will take 1UT for COPY + 1UT for WT + 1UT for SHT = 3UsT.
+   4. If *n* > 1, at position B, on the call of the leader of the team, let the team after arranging the boxes shout *Hello World!*.
 
 
-
-🤓 <u> **Condition 1 : Two boxes can be moved at a time** </u>
+🤓 **<u>Condition 1 : Only one box can be moved at a time</u>**
 
 Then:
 
-✔️ If there is only 1 person, the task will take 11UsT for COPY + 1UT for WT + 1UT for SHT  = 13 UsT.
+  ✔️ If there is only 1 person, the task will take 23UsT for COPY + 1UT for WT + 1UT for SHT  = 25 UsT.
 
-✔️ If there are 6 persons, the task will take 6UsT for COPY + 1UT for WT + 1UT for SHT = 8UsT.
+  ✔️ If there are 6 persons, the task will take 13UsT for COPY + 1UT for WT + 1UT for SHT = 15UsT.
 
-✔️ If there are 9 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
+  ✔️ If there are 9 persons, the task will take 7UsT for COPY + 1UT for ID + 1UT for WT + 1UT for SHT = 10UsT.
 
-✔️ If there are 12 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
+  ✔️ If there are 12 persons, the task will take 1UT for COPY + 1UT for WT + 1UT for SHT = 3UsT.
+
+
+
+🤓 **<u>Condition 1 : Two boxes can be moved at a time</u>**
+
+Then:
+
+  ✔️ If there is only 1 person, the task will take 11UsT for COPY + 1UT for WT + 1UT for SHT  = 13 UsT.
+
+  ✔️ If there are 6 persons, the task will take 6UsT for COPY + 1UT for WT + 1UT for SHT = 8UsT.
+
+  ✔️ If there are 9 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
+
+  ✔️ If there are 12 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
+  
 
 ### 4.1.1.1. 🔷 What did we learn
 
