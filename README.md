@@ -247,14 +247,17 @@ Then:
 ---
 
    1. The more the persons the lesser amount of time it takes to complete the task. 
+   
 > Persons here represent resources in parallel programming - CPU cores, GPU cores, heterogeneous processors.
 
    2. The assignment of a leader if n > 1 ensures coordination of the team.
-> In parallel programming, this is called synchronization. Synchronization is usually performed by designated clauses, for example - ".wait()" in DPC++, "#pragma omp barrier" in OpenMP, e.t.c.
+   
+> In parallel programming, this is called synchronization. Synchronization is usually performed by designated clauses, for example - ".wait( )" in DPC++, "#pragma omp barrier" in OpenMP, e.t.c.
 
    3. Idleness of resources adds an additional cost to task completion time. We see this in Condition 1, when 9 persons are used. 
       From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B (Idleness), while 3 persons return to position A, to move *ld!* to
       position B.
+     
 > In parallel programming, overcoming idleness, that is, getting every resource to always have a task to perform increases performance.
 
 
@@ -296,6 +299,17 @@ From the image shown above,
     red line = wait line between the Grey box and the black box
   
 
+📝 **What we should learn**
+---
+
+  1. The total number of threads = 12, which in the illustration above, is equal to the number of individual string values, so that each iteration
+  is assigned to each thread.
+  
+  > In parallel computing, threads are resources - cpu cores, gpu cores.
+  
+  2. The threads are carriers of the iteration index, which in turn are readers of the string values stored in source container A.
+  
+  >
 
     Now, the threads are carriers of the string values and they have been assigned to the string values in an order of magnitude.
     
