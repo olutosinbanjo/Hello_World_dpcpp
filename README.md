@@ -182,15 +182,23 @@ In this tutorial, we will be printing out the Hello World! statement; I Know it'
 Hello World! is a string value made up of 12 characters as seen above. 
 
 
-### A Fun Way of Explaining
+### 🔶A Fun Way of Explaining
 
-**Assumptions:**
+🤓 **Assumptions:**
 
-1. Let position A represent a container having 12 boxes; each box has an inscription of the individual letters of the string value *Hello World!*
+1. Let position A represent a container having 12 boxes; each box has an inscription of the individual letters of the string value *Hello World!*; also, the arrangements of each box are in the same order as the string value *Hello World!*
 2. Let another position B represent a container 5cm away from position A.
 3. Let the moving distance from position A to position B and vice-versa be 1 unit of time.
 
-**Task**
+🤓 **Task**
+
+1. Assign *n* number of persons to move all boxes in position A to position B; at position B, the boxes will be in the same order as the string value *Hello World!*.
+2. If *n* > 1, let a leader be assigned, so that there is a team.
+3. If *n* > 1, at position B, on the call of the leader of the team, let the team after arranging the boxes shout *Hello World!*.
+
+🤓 **Condition 1 : Only one box can be moved at a time**
+
+
 
 
 <p align="center">
