@@ -185,7 +185,8 @@ Hello World! is a string value made up of 12 characters as seen above.
 
 ### 4.1.1. 🔷 A Fun Way of Explaining
 
-🤓 **<u>Assumptions:</u>**
+🤓 **Assumptions:**
+---
 
    1. Let position A represent a container having 12 boxes; each box has an inscription of the individual letters of the string value *Hello World!*; also, the 
    arrangements of each box are in the same order as the string value *Hello World!*
@@ -198,7 +199,8 @@ Hello World! is a string value made up of 12 characters as seen above.
 
    5. Let the movement from position A to position B be called a **COPY**
 
-🤓 **<u>Task</u>** 
+🤓 **Task**
+---
 
    1. Assign, *n*, number of persons to move all boxes in position A to position B; at position B, the boxes will be in the same order as the string value *Hello 
    World!*.
@@ -210,7 +212,8 @@ Hello World! is a string value made up of 12 characters as seen above.
    4. If *n* > 1, at position B, on the call of the leader of the team, let the team after arranging the boxes shout *Hello World!*.
 
 
-🤓 **<u>Condition 1 : Only one box can be moved at a time</u>**
+🤓 **Condition 1 : Only one box can be moved at a time**
+---
 
 Then:
 
@@ -224,7 +227,8 @@ Then:
 
 
 
-🤓 **<u>Condition 1 : Two boxes can be moved at a time</u>**
+🤓 **Condition 1 : Two boxes can be moved at a time**
+---
 
 Then:
 
@@ -236,6 +240,7 @@ Then:
 
   ✔️ If there are 12 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
   
+
 
 ### 4.1.1.1. 🔷 What did we learn
 
