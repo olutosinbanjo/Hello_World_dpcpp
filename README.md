@@ -184,6 +184,7 @@ In this tutorial, we will be printing out the Hello World! statement; I Know it'
 Hello World! is a string value made up of 12 characters as seen above. 
 
 ### 4.1.1. 🥳 A Fun Way of Explaining
+---
 
 🤓 **Assumptions:**
 ---
@@ -258,6 +259,7 @@ Then:
 
 
 ### 4.1.2. 💻 A Computational Way of Explaining
+---
 
 <p align="center">
   
