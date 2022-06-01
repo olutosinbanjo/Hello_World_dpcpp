@@ -183,7 +183,7 @@ In this tutorial, we will be printing out the Hello World! statement; I Know it'
 
 Hello World! is a string value made up of 12 characters as seen above. 
 
-### 4.1.1. 🔷 A Fun Way of Explaining
+### 4.1.1. 🥳 A Fun Way of Explaining
 
 🤓 **Assumptions:**
 ---
@@ -199,7 +199,7 @@ Hello World! is a string value made up of 12 characters as seen above.
 
    5. Let the movement from position A to position B be called a **COPY**
 
-🤓 **Task**
+🖊️ **Task**
 ---
 
    1. Assign, *n*, number of persons to move all boxes in position A to position B; at position B, the boxes will be in the same order as the string value *Hello 
@@ -212,7 +212,7 @@ Hello World! is a string value made up of 12 characters as seen above.
    4. If *n* > 1, at position B, on the call of the leader of the team, let the team after arranging the boxes shout *Hello World!*.
 
 
-🤓 **Condition 1 : Only one box can be moved at a time**
+➕ **Condition 1 : Only one box can be moved at a time**
 ---
 
 Then:
@@ -227,7 +227,7 @@ Then:
 
 
 
-🤓 **Condition 1 : Two boxes can be moved at a time**
+➕ **Condition 1 : Two boxes can be moved at a time**
 ---
 
 Then:
@@ -242,7 +242,7 @@ Then:
   
 
 
-🤓 **What did we learn**
+📝 **What we should learn**
 ---
 
    1. The more the persons the lesser amount of time it takes to complete the task. 
@@ -254,10 +254,10 @@ Then:
    3. Idleness of resources adds an additional cost to task completion time. We see this in Condition 1, when 9 persons are used. 
       From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B (Idleness), while 3 persons return to position A, to move *ld!* to
       position B.
-> In parallel programming, overcoming idleness, that is, getting every resource to always have a task to perform saves a lot of execution time.
+> In parallel programming, overcoming idleness, that is, getting every resource to always have a task to perform increases performance.
 
 
-### 4.1.2. 🔷 A Computational Way of Explaining
+### 4.1.2. 💻 A Computational Way of Explaining
 
 <p align="center">
   
