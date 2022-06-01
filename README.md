@@ -248,15 +248,32 @@ From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at pos
 
 From the image shown above,
 
-    i = number of iterations; 
-
-    Let A be the source container of the individual string values.
+    Let the total number of string value = _n_;
     
-    Let B be the destination container of the copied individual string values.
+    Now, 
 
-    Let x be a team of threads, which is equal to the number of individual string values (total number of threads = 12).
+    i = index of iterations, which is greater than or equal to _n_.
+        Therefore, i = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}
     
-    Let C, be the timing of thread finishes in an arbitrary unit of time, such that 1 = first thread to finish, 5 = 5th thread to finish, and so on.
+    A = The source container of the individual string values.
+    
+    B = The destination container of the copied individual string values.
+    
+    x = Team of threads. The total number of threads = 12, which in the illustration above, is equal to the number of individual string values, so that each iteration
+        is assigned to each thread.
+        
+        The threads are carriers of the iteration index, which in turn are readers of the string values stored in source container A.
+    
+    y = Timing of thread finishes in an arbitrary unit of time (UT) to indicate that the threads advance towards the end of the parallel region at different times 
+        such that 1 = first thread to finish, 5 = 5th thread to finish, and so on. (However, the time difference between the threads finishes might be neglligible - 
+        e.g - first thread finish = 0.000050UT, second thread finish = 0.000051UT, third thread finish = 0.000056UT e.t.c.). 
+    
+    Grey box = Parallel region
+    
+    Black box = sequential region
+    
+    red line = wait line between the Grey box and the black box
+  
 
 
     Now, the threads are carriers of the string values and they have been assigned to the string values in an order of magnitude.
