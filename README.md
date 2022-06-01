@@ -6,7 +6,7 @@
 </p>
 
 
-1.0. ## What is DPC++ ?
+## 1.0. What is DPC++ ?
 
 DPC++ is a project under Intel® oneAPI; it is Intel’s adaption / implementation of SYCL - an industry-driven standard that adds data parallelism to C++ for heterogeneous systems. It is a friendly relationship between C++, SYCL and added extensions (- such as Unified Shared Memory, use of sub-groups, e.t.c).
 
@@ -17,7 +17,7 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 </p>
 
 
-## Features of DPC++ 
+## 1.1. Features of DPC++ 
 
 :heavy_check_mark: Accelerated Computing
 
@@ -36,7 +36,7 @@ Therefore, learning DPC++ is simply learning ”data-parallel programming with C
 For a detailed expansion of the points above, see section 1.2. in this [article](https://medium.com/@olutosinbanjo/intel-oneapi-a-new-name-for-expressing-programming-across-multiple-architectures-17e2bce63bfe).
 
 
-1.1. ## Some Domain Specific Applications of DPC++
+ ## 1.2. Some Domain Specific Applications of DPC++
 
 :white_check_mark: High Performance Computing : [Example: Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing (Rodinia Application Benchmark suite)](https://www.sciencedirect.com/science/article/pii/S0743731522000727) (see also example in 3 below)
 
@@ -51,7 +51,7 @@ For a detailed expansion of the points above, see section 1.2. in this [article]
 ***I would like to point out this interesting paper I found that evaluates the performance of DPC++ against CUDA* and OpenMP. It was worth my reading time! Brilliant work and its open source! - [Evaluation of Intel's DPC++ Compatibility Tool in heterogeneous computing](https://www.sciencedirect.com/science/article/pii/S0743731522000727)***
 
 
-2.0. # Tools for Following this tutorial
+# 2.0 Tools for Following this tutorial
 
 ⚫ A Computer
 
@@ -67,13 +67,13 @@ The DevCloud is a free remote development environment for learning about and pro
 Please note that: You can also set up the Intel® oneAPI Base Toolkit on your computer by downloading the installer from [here](https://www.intel.com/content/www/us/en/developer/tools/oneapi/toolkits.html#base-kit)
 
 
-3.0. # Following the tutorial
+# 3.0. Following the tutorial
 
 Having signed up for a free devcloud account: please do the following: 
 
 (*To know how to configure the DevCloud to use HTTPS and SSH for git clone, please check this article: [Cloning a git repository hosted on github.com or gitlab.com in Intel® DevCloud](https://devmesh.intel.com/post/1025129/cloning-a-git-repository-hosted-on-github-com-or-gitlab-com-in-intel-devcloud)*.
 
-## With git clone - DevCloud 
+## 3.1. With git clone - DevCloud 
 
          >> On your local terminal (linux, cygwin, mingw64, e.t.c), communicate with your remote devcloud account (terminal - programming and runtime environment) :
 
@@ -118,7 +118,7 @@ Having signed up for a free devcloud account: please do the following:
          
 Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/www/us/en/products/sku/134860/intel-xeon-e2176g-processor-12m-cache-up-to-4-70-ghz/specifications.html).
           
-## Without git clone - DevCloud
+## 3.2. Without git clone - DevCloud
 
           >> download zip folder from github.com
           
@@ -172,18 +172,18 @@ Read about the Intel® Xeon® E-2176G CPU [here](https://www.intel.com/content/w
           
           
           
-4.0. # Let's get to work!
+# 4.0. Let's get to work!
 
 In this tutorial, we will be printing out the Hello World! statement; I Know it's pretty naive for a data parallel programming model. But Hello World! is data, and we simply want to get started with something really simple.
 
 
-4.1. ## Hello World! from a parallel perspective - ARRAY COPY
+## 4.1. Hello World! from a parallel perspective - ARRAY COPY
 
 **Hello World! = 'H' + 'e' + 'l' + 'l' + 'o' + ' ' + 'W' + 'o' + 'r' + 'l' + 'd' + '!'**
 
 Hello World! is a string value made up of 12 characters as seen above. 
 
-4.1.1. ### 🔷 A Fun Way of Explaining
+### 4.1.1. 🔷 A Fun Way of Explaining
 
 🤓 **Assumptions:**
 
@@ -225,7 +225,7 @@ Then:
 
 ✔️ If there are 12 persons, there are too many persons than required, so, select 6 persons. The task will take 8UsT.
 
-4.1.1.1. ### 🔷 What did we learn
+### 4.1.1.1. 🔷 What did we learn
 
 1. The more the persons the lesser amount of time it takes to complete the task. 
 >> Persons here represent resources in parallel programming - CPU cores, GPU cores, heterogeneous processors.
@@ -237,7 +237,8 @@ Then:
 From position A, 9 persons move *Hello Wor* to position B; 6 persons wait at position B (Idleness), while 3 persons return to position A, to move *ld!* to position B.
 >> In parallel programming, overcoming idleness, that is, getting every resource to always have a task to perform saves a lot of execution time.
 
-4.1.2. ### 🔷 A Computational Way of Explaining
+
+### 4.1.2. 🔷 A Computational Way of Explaining
 
 <p align="center">
   
