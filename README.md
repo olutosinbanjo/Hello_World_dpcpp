@@ -6,11 +6,11 @@
 </p>
 
 # Contents
-**[What is DPC++ ?](#what-is-dpc++-?)**<br>
-**[1.1. Features of DPC++ ](##features-of-dpc++)**<br>
-**[1.2. Some Domain Specific Applications of DPC++](##some-dpmain_specific-applications-of-dpc++)**<br>
+**[1.0. What is DPC++ ?](#what-is-dpc++-?)**<br>
+**[1.1. Features of DPC++ ](#features-of-dpc++)**<br>
+**[1.2. Some Domain Specific Applications of DPC++](#some-dpmain_specific-applications-of-dpc++)**<br>
 
-# What is DPC++ ?
+# 1.0. What is DPC++ ?
 
 DPC++ is a project under Intel® oneAPI; it is Intel’s adaption / implementation of SYCL - an industry-driven standard that adds data parallelism to C++ for heterogeneous systems. It is a friendly relationship between C++, SYCL and added extensions (- such as Unified Shared Memory, use of sub-groups, e.t.c).
 
