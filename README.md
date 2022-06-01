@@ -6,15 +6,29 @@
 </p>
 
 # Contents
-**[1.0. What is DPC++ ?](#what-is-dpc++-?)**<br>
-**[1.1. Features of DPC++ ](#features-of-dpc++)**<br>
-**[1.2. Some Domain Specific Applications of DPC++](#some-dpmain_specific-applications-of-dpc++)**<br>
-**[2.0. Tools for Following this tutorial]
-**[3.0. Following the tutorial]
-**[3.1. With git clone - DevCloud]
-**[3.2. Without git clone - DevCloud]
-**[4.0. Let's get to work!]
-**[4.1. Hello World! from a parallel perspective - ARRAY COPY]
-**[4.1.1. 🥳 A Fun Way of Explaining]
-**[4.1.2. 💻 A Computational Way of Explaining]
-**[References]
+
+1.0. What is DPC++ ?
+
+1.1. Features of DPC++ 
+
+1.2. Some Domain Specific Applications of DPC++
+
+2.0. Tools for Following this tutorial
+
+3.0. Following the tutorial
+
+3.1. With git clone - DevCloud
+
+3.2. Without git clone - DevCloud
+
+4.0. Let's get to work!
+
+4.1. Hello World! from a parallel perspective - ARRAY COPY
+
+4.1.1. 🥳 A Fun Way of Explaining
+
+4.1.2. 💻 A Computational Way of Explaining
+
+References
+
+
