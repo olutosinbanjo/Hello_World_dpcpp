@@ -7,7 +7,7 @@
 
 # About
 
-A basic DPC++ tutorial. Head out [here](https://github.com/olutosinbanjo/Hello_World_dpcpp/wiki/The-Basic-Ideas-of-Data-Parallel-CPP-,-DPCPP) to follow it.
+A basic DPC++ tutorial. Head out [here]() to follow it.
 
 
 # Contents
