@@ -7,7 +7,7 @@
 
 # About
 
-A basic DPC++ tutorial. Head out [here]() to follow it.
+A basic DPC++ tutorial. Head out to [https://github.com/olutosinbanjo/Hello_World_dpcpp/wiki](https://github.com/olutosinbanjo/Hello_World_dpcpp/wiki) to follow it.
 
 
 # Contents
