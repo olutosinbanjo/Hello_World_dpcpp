@@ -20,11 +20,11 @@ int main()
 	{
 
 	// select device
-	cl::sycl::queue queue_device{cl::sycl::gpu_selector{}};
+	sycl::queue queue_device{sycl::gpu_selector{}};
 
 	// dynamically allocate arrays
-	char *a = cl::sycl::malloc_shared<char>(n , queue_device);
-	char *b = cl::sycl::malloc_shared<char>(n , queue_device);
+	char *a = sycl::malloc_shared<char>(n , queue_device);
+	char *b = sycl::malloc_shared<char>(n , queue_device);
 
 	// check null array
 	if ( (a == NULL) || (b == NULL) ){
@@ -41,7 +41,7 @@ int main()
 
 	// Print out device information
 	std::cout << "DEVICE = " 
-		  << queue_device.get_device().get_info<cl::sycl::info::device::name>() 
+		  << queue_device.get_device().get_info<sycl::info::device::name>() 
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
@@ -62,10 +62,10 @@ int main()
 	}
 
 	// define kernel to do array swap on selected device
-	cl::sycl::range<1> size{n};
+	sycl::range<1> size{n};
 	{
-		queue_device.submit([&] (cl::sycl::handler &h) {
-			h.parallel_for(size, [=](cl::sycl::id<1> idx) {	
+		queue_device.submit([&] (sycl::handler &h) {
+			h.parallel_for(size, [=](sycl::id<1> idx) {	
 				int i = idx[0];
 				b[i] = a[i];
 				});
@@ -81,10 +81,10 @@ int main()
 	std::cout << "\n";
 
 	// free allocated memory
-	cl::sycl::free(a, queue_device);
-	cl::sycl::free(b, queue_device);
+	sycl::free(a, queue_device);
+	sycl::free(b, queue_device);
 
-	}catch(cl::sycl::exception &e) {
+	}catch(sycl::exception const &e) {
 		std::cout << e.what() << std::endl;
 		std::terminate();
 	}
