@@ -4,6 +4,8 @@
  *
  * Unified Shared Memory
  *
+ * ARRAY COPY
+ *
  * @ author: Oluwatosin Odubanjo
  *
  * @date: May 10, 2022
