@@ -1,10 +1,10 @@
 /**************************
  *
- * HELLO WORLD in DPC++
- *
- * Unified Shared Memory
+ * HELLO WORLD in DPC++ - 
  *
  * ARRAY COPY
+ *
+ * Unified Shared Memory
  *
  * @ author: Oluwatosin Odubanjo
  *
