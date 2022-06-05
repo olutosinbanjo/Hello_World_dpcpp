@@ -1,6 +1,8 @@
 /*************************
  *
- * HELLO WORLD in DPC++
+ * HELLO WORLD in DPC++ - 
+ *
+ * ARRAY COPY
  *
  * Buffers from vector data
  *
@@ -38,11 +40,11 @@ int main()
 	{
 
 	//select device
-	cl::sycl::queue queue_device{cl::sycl::gpu_selector{}};
+	sycl::queue queue_device{sycl::gpu_selector{}};
 
 	// Print out device information
 	std::cout << "DEVICE = " 
-		  << queue_device.get_device().get_info<cl::sycl::info::device::name>() 
+		  << queue_device.get_device().get_info<sycl::info::device::name>() 
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
@@ -64,21 +66,21 @@ int main()
 
 	// create buffers for data object that needs to be used on the device
 	// here buffers have been created from pointer data
-	cl::sycl::buffer<char, 1> a_buffer{a.data(), cl::sycl::range<1>(n)};
-	cl::sycl::buffer<char, 1> b_buffer{b.data(), cl::sycl::range<1>(n)};
+	sycl::buffer<char, 1> a_buffer{a.data(), sycl::range<1>(n)};
+	sycl::buffer<char, 1> b_buffer{b.data(), sycl::range<1>(n)};
 
 	// define kernel to do array swap on selected device
-	cl::sycl::range<1> size{n};
+	sycl::range<1> size{n};
 	{
-		queue_device.submit([&] (cl::sycl::handler &h) {
+		queue_device.submit([&] (sycl::handler &h) {
 			// create buffer accessors
 			// data type of accessor is automatically inferred from type of buffer above
-			auto a_accessor = a_buffer.get_access<cl::sycl::access::mode::read>(h);
-		        auto b_accessor = b_buffer.get_access<cl::sycl::access::mode::write>(h); 
+			auto a_accessor = a_buffer.get_access<sycl::access::mode::read>(h);
+		        auto b_accessor = b_buffer.get_access<sycl::access::mode::write>(h); 
 			//accessors can also be defined like this - notice the difference
 			//cl::sycl::accessor a_accessor(a_buffer, h, cl::sycl::read_only);
 			//cl::sycl::accessor b_accessor(b_buffer, h, cl::sycl::write_only); 	
-			h.parallel_for(size, [=](cl::sycl::id<1> idx) {	
+			h.parallel_for(size, [=](sycl::id<1> idx) {	
 				int i = idx[0];
 				b_accessor[i] = a_accessor[i];
 				});
@@ -87,7 +89,7 @@ int main()
 
 	//since data stored in buffers cannot be accessed directly
 	//use a host accessor to access data on host
-	cl::sycl::host_accessor B(b_buffer, cl::sycl::read_only);
+	sycl::host_accessor B(b_buffer, sycl::read_only);
 
 	//print array on host
 	for(int i = 0; i < n; i++)
@@ -96,7 +98,7 @@ int main()
 	}
 	std::cout << "\n";
 
-	}catch(cl::sycl::exception &e) {
+	}catch(sycl::exception const &e) {
 		std::cout << e.what() << std::endl;
 		std::terminate();
 	}
