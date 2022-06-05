@@ -2,7 +2,7 @@
  *
  * HELLO WORLD in DPC++
  *
- * using ARRAY SWAP - copy the contents of one array to another
+ * using ARRAY COPY - copy the contents of one array to another
  *
  * Unified Shared Memory - (more control)
  *
@@ -22,13 +22,13 @@ int main()
 	{
 
 	// select device
-	cl::sycl::queue queue_host{cl::sycl::host_selector{}};
-	cl::sycl::queue queue_gpu{cl::sycl::gpu_selector{}};
+	sycl::queue queue_host{sycl::host_selector{}};
+	sycl::queue queue_gpu{sycl::gpu_selector{}};
 
 	// dynamically allocate arrays 
-	char *a = cl::sycl::malloc_shared<char>(n , queue_gpu);
-	char *b = cl::sycl::malloc_device<char>(n , queue_gpu);
-	char *c = cl::sycl::malloc_host<char>(n, queue_host);
+	char *a = sycl::malloc_shared<char>(n , queue_gpu);
+	char *b = sycl::malloc_device<char>(n , queue_gpu);
+	char *c = sycl::malloc_host<char>(n, queue_host);
 
 	// check null array
 	if ( (a == NULL) || (b == NULL) || (c == NULL) ) {
@@ -46,10 +46,10 @@ int main()
 
 	// print device information
 	std::cout << "HOST DEVICE = " 
-		  << queue_host.get_device().get_info<cl::sycl::info::device::name>()
+		  << queue_host.get_device().get_info<sycl::info::device::name>()
 		  << "\n" << std::endl;
 	std::cout << "GPU DEVICE = " 
-		  << queue_gpu.get_device().get_info<cl::sycl::info::device::name>()
+		  << queue_gpu.get_device().get_info<sycl::info::device::name>()
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
@@ -70,10 +70,10 @@ int main()
 	}
 
 	// define kernel to do array swap on gpu device
-	cl::sycl::range<1> size{n};
+	sycl::range<1> size{n};
 	{
-		queue_gpu.submit([&] (cl::sycl::handler &h) {
-			h.parallel_for(size, [=](cl::sycl::id<1> idx) {	
+		queue_gpu.submit([&] (sycl::handler &h) {
+			h.parallel_for(size, [=](sycl::id<1> idx) {	
 				int i = idx[0];
 				b[i] = a[i];
 				});
@@ -92,11 +92,11 @@ int main()
 	std::cout << "\n";
 
 	//free allocated memory
-	cl::sycl::free(a, queue_gpu);
-	cl::sycl::free(b, queue_gpu);
-	cl::sycl::free(c, queue_host);
+	sycl::free(a, queue_gpu);
+	sycl::free(b, queue_gpu);
+	sycl::free(c, queue_host);
 
-	}catch (cl::sycl::exception &e) {
+	}catch (sycl::exception const &e) {
 		std::cout << e.what() << std::endl;
 		std::terminate();
 	}
