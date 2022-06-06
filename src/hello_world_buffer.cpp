@@ -68,7 +68,7 @@ int main()
 	sycl::buffer<char, 1> a_buffer(a, sycl::range<1>(n));
 	sycl::buffer<char, 1> b_buffer(b, sycl::range<1>(n));
 
-	// define kernel to do array swap on selected device
+	// define kernel to do array copy on selected device
 	sycl::range<1> size{n};
 	{
 		queue_device.submit([&] (sycl::handler &h) {
@@ -83,7 +83,7 @@ int main()
 				int i = idx[0];
 				b_accessor[i] = a_accessor[i];
 				});
-			}).wait();
+			});
 	}
 
 	//since data stored in buffers cannot be accessed directly
