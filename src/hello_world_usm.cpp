@@ -63,7 +63,7 @@ int main()
 	        a[11] = '!';
 	}
 
-	// define kernel to do array swap on selected device
+	// define kernel to do array copy on selected device
 	sycl::range<1> size{n};
 	{
 		queue_device.submit([&] (sycl::handler &h) {
