@@ -69,7 +69,7 @@ int main()
 	        a[11] = '!';
 	}
 
-	// define kernel to do array swap on gpu device
+	// define kernel to do array copy on gpu device
 	sycl::range<1> size{n};
 	{
 		queue_gpu.submit([&] (sycl::handler &h) {
