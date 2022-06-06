@@ -84,7 +84,7 @@ int main()
 				int i = idx[0];
 				b_accessor[i] = a_accessor[i];
 				});
-			}).wait();
+			});
 	}
 
 	//since data stored in buffers cannot be accessed directly
