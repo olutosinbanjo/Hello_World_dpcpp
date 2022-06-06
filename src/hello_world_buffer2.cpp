@@ -69,7 +69,7 @@ int main()
 	sycl::buffer<char, 1> a_buffer{a.data(), sycl::range<1>(n)};
 	sycl::buffer<char, 1> b_buffer{b.data(), sycl::range<1>(n)};
 
-	// define kernel to do array swap on selected device
+	// define kernel to do array copy on selected device
 	sycl::range<1> size{n};
 	{
 		queue_device.submit([&] (sycl::handler &h) {
