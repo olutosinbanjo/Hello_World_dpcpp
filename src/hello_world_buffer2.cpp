@@ -27,6 +27,8 @@ int main()
 	// dynamically allocate arrays
 	// std::vector is a sequence container that houses dynamically sized arrays
 	std::vector<char> a(n);
+	//The next line can be used inplace of lines 54 - 68
+//      std::vector<char> a = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'};
 	std::vector<char> b(n);
 
 	// check null container
