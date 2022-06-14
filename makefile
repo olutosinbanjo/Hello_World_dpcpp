@@ -1,7 +1,7 @@
 CXX = dpcpp
 
 #COMPILER_FLAGS = -Wall -Wextra -Werror -O0 -g
-DPCPP_FLAGS = -fsycl -fsycl-device-code-split=per_kernel
+DPCPP_FLAGS = -fsycl -fsycl-unamed-lambda -fsycl-device-code-split=per_kernel
 
 # OBJECT FILES
 
