@@ -1,6 +1,7 @@
 CXX = dpcpp
 
-DPCPP_OPTS = -fsycl -fsycl-device-code-split=per_kernel
+#COMPILER_FLAGS = -Wall -Wextra -Werror -O0 -g
+DPCPP_FLAGS = -fsycl -fsycl-device-code-split=per_kernel
 
 # OBJECT FILES
 
@@ -16,10 +17,10 @@ SRC3 = src/hello_world_buffer.cpp
 SRC4 = src/hello_world_buffer2.cpp
 
 build:
-	$(CXX) $(DPCPP_OPTS) -o $(EXEC1) $(SRC1) 
-	$(CXX) $(DPCPP_OPTS) -o $(EXEC2) $(SRC2) 
-	$(CXX) $(DPCPP_OPTS) -o $(EXEC3) $(SRC3) 
-	$(CXX) $(DPCPP_OPTS) -o $(EXEC4) $(SRC4)
+	$(CXX) $(DPCPP_FLAGS) -o $(EXEC1) $(SRC1) 
+	$(CXX) $(DPCPP_FLAGS) -o $(EXEC2) $(SRC2) 
+	$(CXX) $(DPCPP_FLAGS) -o $(EXEC3) $(SRC3) 
+	$(CXX) $(DPCPP_FLAGS) -o $(EXEC4) $(SRC4)
 
 clean:
 	rm -i $(EXEC1) $(EXEC2) $(EXEC3) $(EXEC4)	
