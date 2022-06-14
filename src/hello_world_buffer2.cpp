@@ -2,7 +2,7 @@
  *
  * HELLO WORLD in DPC++ - 
  *
- * ARRAY COPY
+ * VECTOR COPY
  *
  * Buffers from vector data
  *
