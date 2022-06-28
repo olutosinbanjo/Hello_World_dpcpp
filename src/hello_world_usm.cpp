@@ -28,18 +28,24 @@ int main()
 	char *a = sycl::malloc_shared<char>(N , queue_device);
 	char *b = sycl::malloc_shared<char>(N , queue_device);
 
-	// check null array
-	if ( (a == NULL) || (b == NULL) ){
-		std::cout << "Could not allocate memory\n!" << std::endl;
-		std::cout << "NULL ARRAY FOUND IN main function()! Exiting...\n" << std::endl;
-		exit(EXIT_FAILURE);
-	}
-
 	// memory allocated with malloc is filled with garbage value
-	// so zero-set the allocated arrays
-	// memset() will fill allocated arrays with zero
-	queue_device.memset(a, 0, N).wait();
-	queue_device.memset(b, 0, N).wait();
+        // check null array and zero-set the allocated arrays
+        // memset() will fill allocated arrays with zero
+        if(a != NULL){
+        queue_device.memset(a, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory to array a!\n" << std::endl;
+                std::cout << "Array a is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
+
+        if(b != NULL){
+        queue_device.memset(b, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory to array b!\n" << std::endl;
+                std::cout << "Array b is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
 
 	// Print out device information
 	std::cout << "DEVICE = " 
