@@ -28,23 +28,29 @@ int main()
 	char *a = (char*)malloc(N * sizeof(char)); 
 	char *b = (char*)malloc(N * sizeof(char)); 
 
-	// check null array
-	if ( (a == NULL) || (b == NULL) ){
-		std::cout << "Could not allocate memory\n!" << std::endl;
-		std::cout << "NULL ARRAY FOUND IN main function()! Exiting...\n" << std::endl;
-		exit(EXIT_FAILURE);
-	}
-
 	// memory allocated with malloc is filled with garbage value
-	// so zero-set the allocated arrays
+	// so, check null array and zero-set the allocated arrays
 	// memset() will fill allocated arrays with zero
-	memset(a, 0, N);
-	memset(b, 0, N);
+	if(a != NULL){
+        memset(a, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory!\n" << std::endl;
+                std::cout << "Array a is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
+
+        if(b != NULL){
+        memset(b, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory!\n" << std::endl;
+                std::cout << "Array b is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
 
 	// Print out device information
 	std::cout << "DEVICE = " 
 		  << queue_device.get_device().get_info<sycl::info::device::name>() 
-		  << "\n" << std::endl;
+		  << '\n' << std::endl;
 
 	// Fill array on host with string value
 	for(int i = 0; i < N; i++)
@@ -95,7 +101,7 @@ int main()
 	{
 		std::cout << B[i];
 	}
-	std::cout << "\n";
+	std::cout << '\n';
 
 	//free allocated memory
 	free(a);
