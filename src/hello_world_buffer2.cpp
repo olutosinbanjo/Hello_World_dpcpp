@@ -20,16 +20,16 @@
 //#include <vector>
 //#include <iostream>
 
-#define n 12
+#define N 12
 
 int main()
 {
 	// dynamically allocate arrays
 	// std::vector is a sequence container that houses dynamically sized arrays
-	std::vector<char> a(n);
+	std::vector<char> a(N);
 	//The next line can be used inplace of lines 54 - 68
 //      std::vector<char> a = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!'};
-	std::vector<char> b(n);
+	std::vector<char> b(N);
 
 	// check null container
 	if ( (a.empty()) || (b.empty()) ){
@@ -50,7 +50,7 @@ int main()
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		a[0] = 'H'; 
 		a[1] = 'e';
@@ -72,7 +72,7 @@ int main()
 	sycl::buffer<char, 1> b_buffer{b.data(), sycl::range<1>(n)};
 
 	// define kernel to do array copy on selected device
-	sycl::range<1> size{n};
+	sycl::range<1> size{N};
 	{
 		queue_device.submit([&] (sycl::handler &h) {
 			// create buffer accessors
@@ -94,7 +94,7 @@ int main()
 	sycl::host_accessor B(b_buffer, sycl::read_only);
 
 	//print array on host
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		std::cout << B[i];
 	}
