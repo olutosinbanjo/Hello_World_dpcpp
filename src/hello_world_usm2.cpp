@@ -14,7 +14,7 @@
  * *******************************************************************/
 #include <CL/sycl.hpp>
 
-#define n 12
+#define N 12
 
 int main()
 {
@@ -26,9 +26,9 @@ int main()
 	sycl::queue queue_gpu{sycl::gpu_selector{}};
 
 	// dynamically allocate arrays 
-	char *a = sycl::malloc_shared<char>(n , queue_gpu);
-	char *b = sycl::malloc_device<char>(n , queue_gpu);
-	char *c = sycl::malloc_host<char>(n, queue_host);
+	char *a = sycl::malloc_shared<char>(N , queue_gpu);
+	char *b = sycl::malloc_device<char>(N , queue_gpu);
+	char *c = sycl::malloc_host<char>(N, queue_host);
 
 	// check null array
 	if ( (a == NULL) || (b == NULL) || (c == NULL) ) {
@@ -40,9 +40,9 @@ int main()
 	// memory allocated with malloc is filled with garbage value 
 	// so zero-set allocated memory
 	// memset() will fill all allocated arrays with zero
-	queue_gpu.memset(a, 0, n).wait();
-	queue_gpu.memset(b, 0, n).wait();
-	queue_host.memset(c, 0, n).wait();
+	queue_gpu.memset(a, 0, N).wait();
+	queue_gpu.memset(b, 0, N).wait();
+	queue_host.memset(c, 0, N).wait();
 
 	// print device information
 	std::cout << "HOST DEVICE = " 
@@ -53,7 +53,7 @@ int main()
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		a[0] = 'H'; 
 		a[1] = 'e';
@@ -70,7 +70,7 @@ int main()
 	}
 
 	// define kernel to do array copy on gpu device
-	sycl::range<1> size{n};
+	sycl::range<1> size{N};
 	{
 		queue_gpu.submit([&] (sycl::handler &h) {
 			h.parallel_for(size, [=](sycl::id<1> idx) {	
@@ -82,10 +82,10 @@ int main()
 
 	//since memory of array b is allocated is with malloc_device
 	//do memcpy to access array b on host
-	queue_gpu.memcpy(c, b, n * sizeof(char)).wait();
+	queue_gpu.memcpy(c, b, N * sizeof(char)).wait();
 
 	// print array c on host
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		std::cout << c[i];
 	}
