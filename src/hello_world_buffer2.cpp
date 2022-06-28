@@ -110,6 +110,7 @@ int main()
 			std::cout << B[i];
 		}
 		std::cout << '\n';
+		
 	}catch(sycl::exception const &e) {
 		std::cout << e.what() << std::endl;
 		std::terminate();
