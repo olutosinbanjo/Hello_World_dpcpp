@@ -30,20 +30,33 @@ int main()
 	char *b = sycl::malloc_device<char>(N , queue_gpu);
 	char *c = sycl::malloc_host<char>(N, queue_host);
 
-	// check null array
-	if ( (a == NULL) || (b == NULL) || (c == NULL) ) {
-		std::cout << "Could not allocate memory!\n" << std::endl;
-		std::cout << "NULL ARRAY FOUND IN main() function! Existing ...\n" << std::endl;
-		exit(EXIT_FAILURE);
-	}
+	// memory allocated with malloc is filled with garbage value
+        // so, check null array and zero-set the allocated arrays
+        // memset() will fill allocated arrays with zero
+        if(a != NULL){
+        queue_device.memset(a, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory\n!" << std::endl;
+                std::cout << "Array a is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
 
-	// memory allocated with malloc is filled with garbage value 
-	// so zero-set allocated memory
-	// memset() will fill all allocated arrays with zero
-	queue_gpu.memset(a, 0, N).wait();
-	queue_gpu.memset(b, 0, N).wait();
-	queue_host.memset(c, 0, N).wait();
+        if(b != NULL){
+        queue_device.memset(b, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory\n!" << std::endl;
+                std::cout << "Array b is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
 
+	if(c != NULL){
+        queue_device.memset(c, 0, N).wait();
+        }else{
+                std::cout << "Could not allocate memory\n!" << std::endl;
+                std::cout << "Array c is NULL! Exiting...\n" << std::endl;
+                exit(EXIT_FAILURE);
+        }
+		
 	// print device information
 	std::cout << "HOST DEVICE = " 
 		  << queue_host.get_device().get_info<sycl::info::device::name>()
