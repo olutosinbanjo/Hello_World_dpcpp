@@ -14,7 +14,7 @@
  * ************************/
 #include <CL/sycl.hpp>
 
-#define n 12
+#define N 12
 
 int main()
 {
@@ -25,8 +25,8 @@ int main()
 	sycl::queue queue_device{sycl::gpu_selector{}};
 
 	// dynamically allocate arrays
-	char *a = sycl::malloc_shared<char>(n , queue_device);
-	char *b = sycl::malloc_shared<char>(n , queue_device);
+	char *a = sycl::malloc_shared<char>(N , queue_device);
+	char *b = sycl::malloc_shared<char>(N , queue_device);
 
 	// check null array
 	if ( (a == NULL) || (b == NULL) ){
@@ -38,8 +38,8 @@ int main()
 	// memory allocated with malloc is filled with garbage value
 	// so zero-set the allocated arrays
 	// memset() will fill allocated arrays with zero
-	queue_device.memset(a, 0, n).wait();
-	queue_device.memset(b, 0, n).wait();
+	queue_device.memset(a, 0, N).wait();
+	queue_device.memset(b, 0, N).wait();
 
 	// Print out device information
 	std::cout << "DEVICE = " 
@@ -47,7 +47,7 @@ int main()
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		a[0] = 'H'; 
 		a[1] = 'e';
@@ -64,7 +64,7 @@ int main()
 	}
 
 	// define kernel to do array copy on selected device
-	sycl::range<1> size{n};
+	sycl::range<1> size{N};
 	{
 		queue_device.submit([&] (sycl::handler &h) {
 			h.parallel_for(size, [=](sycl::id<1> idx) {	
@@ -76,7 +76,7 @@ int main()
 
 	//since memory allocated is with malloc_shared
 	//array b is accessible on the host as well
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		std::cout << b[i];
 	}
