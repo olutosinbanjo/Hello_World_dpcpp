@@ -14,7 +14,7 @@
  * ************************/
 #include <CL/sycl.hpp>
 
-#define n 12
+#define N 12
 
 int main()
 {
@@ -25,8 +25,8 @@ int main()
 	sycl::queue queue_device{sycl::gpu_selector{}};
 
 	// dynamically allocate arrays
-	char *a = (char*)malloc(n * sizeof(char)); 
-	char *b = (char*)malloc(n * sizeof(char)); 
+	char *a = (char*)malloc(N * sizeof(char)); 
+	char *b = (char*)malloc(N * sizeof(char)); 
 
 	// check null array
 	if ( (a == NULL) || (b == NULL) ){
@@ -38,8 +38,8 @@ int main()
 	// memory allocated with malloc is filled with garbage value
 	// so zero-set the allocated arrays
 	// memset() will fill allocated arrays with zero
-	memset(a, 0, n);
-	memset(b, 0, n);
+	memset(a, 0, N);
+	memset(b, 0, N);
 
 	// Print out device information
 	std::cout << "DEVICE = " 
@@ -47,7 +47,7 @@ int main()
 		  << "\n" << std::endl;
 
 	// Fill array on host with string value
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		a[0] = 'H'; 
 		a[1] = 'e';
@@ -69,7 +69,7 @@ int main()
 	sycl::buffer<char, 1> b_buffer(b, sycl::range<1>(n));
 
 	// define kernel to do array copy on selected device
-	sycl::range<1> size{n};
+	sycl::range<1> size{N};
 	{
 		queue_device.submit([&] (sycl::handler &h) {
 			// create buffer accessors
@@ -91,7 +91,7 @@ int main()
 	sycl::host_accessor B(b_buffer, sycl::read_only);
 
 	//print array on host
-	for(int i = 0; i < n; i++)
+	for(int i = 0; i < N; i++)
 	{
 		std::cout << B[i];
 	}
