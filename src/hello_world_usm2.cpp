@@ -36,7 +36,7 @@ int main()
         if(a != NULL){
         queue_device.memset(a, 0, N).wait();
         }else{
-                std::cout << "Could not allocate memory\n!" << std::endl;
+                std::cout << "Could not allocate memory!\n" << std::endl;
                 std::cout << "Array a is NULL! Exiting...\n" << std::endl;
                 exit(EXIT_FAILURE);
         }
@@ -44,7 +44,7 @@ int main()
         if(b != NULL){
         queue_device.memset(b, 0, N).wait();
         }else{
-                std::cout << "Could not allocate memory\n!" << std::endl;
+                std::cout << "Could not allocate memory!\n" << std::endl;
                 std::cout << "Array b is NULL! Exiting...\n" << std::endl;
                 exit(EXIT_FAILURE);
         }
@@ -60,10 +60,10 @@ int main()
 	// print device information
 	std::cout << "HOST DEVICE = " 
 		  << queue_host.get_device().get_info<sycl::info::device::name>()
-		  << "\n" << std::endl;
+		  << '\n' << std::endl;
 	std::cout << "GPU DEVICE = " 
 		  << queue_gpu.get_device().get_info<sycl::info::device::name>()
-		  << "\n" << std::endl;
+		  << '\n' << std::endl;
 
 	// Fill array on host with string value
 	for(int i = 0; i < N; i++)
@@ -102,7 +102,7 @@ int main()
 	{
 		std::cout << c[i];
 	}
-	std::cout << "\n";
+	std::cout << '\n';
 
 	//free allocated memory
 	sycl::free(a, queue_gpu);
