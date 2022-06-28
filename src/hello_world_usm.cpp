@@ -34,7 +34,7 @@ int main()
         if(a != NULL){
         queue_device.memset(a, 0, N).wait();
         }else{
-                std::cout << "Could not allocate memory to array a!\n" << std::endl;
+                std::cout << "Could not allocate memory!\n" << std::endl;
                 std::cout << "Array a is NULL! Exiting...\n" << std::endl;
                 exit(EXIT_FAILURE);
         }
@@ -42,7 +42,7 @@ int main()
         if(b != NULL){
         queue_device.memset(b, 0, N).wait();
         }else{
-                std::cout << "Could not allocate memory to array b!\n" << std::endl;
+                std::cout << "Could not allocate memory!\n" << std::endl;
                 std::cout << "Array b is NULL! Exiting...\n" << std::endl;
                 exit(EXIT_FAILURE);
         }
@@ -50,7 +50,7 @@ int main()
 	// Print out device information
 	std::cout << "DEVICE = " 
 		  << queue_device.get_device().get_info<sycl::info::device::name>() 
-		  << "\n" << std::endl;
+		  << '\n' << std::endl;
 
 	// Fill array on host with string value
 	for(int i = 0; i < N; i++)
@@ -86,7 +86,7 @@ int main()
 	{
 		std::cout << b[i];
 	}
-	std::cout << "\n";
+	std::cout << '\n';
 
 	// free allocated memory
 	sycl::free(a, queue_device);
