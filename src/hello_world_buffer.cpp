@@ -31,9 +31,8 @@ int main()
                 // memory allocated with malloc is filled with garbage value
                 // so, check null array and zero-set the allocated arrays
                 // memset() will fill allocated arrays with zero
-                /*
                 if(a != NULL){
-                memset(a, 0, N).wait();
+                memset(a, 0, N);
                 }else{
                         std::cout << "Could not allocate memory!\n" << std::endl;
                         std::cout << "Array a is NULL! Exiting...\n" << std::endl;
@@ -41,7 +40,7 @@ int main()
                 }
 
                 if(b != NULL){
-                memset(b, 0, N).wait();
+                memset(b, 0, N);
                 }else{
                         std::cout << "Could not allocate memory!\n" << std::endl;
                         std::cout << "Array b is NULL! Exiting...\n" << std::endl;
