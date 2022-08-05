@@ -36,6 +36,26 @@ int main()
                 // size of array
                 const int N{ 12 };
 
+		// Asynchronous error handler
+	        auto async_error_handler = [&] (cl::sycl::exception_list exceptions) {
+		        for (auto const& e : exceptions) {
+			        try{
+				        std::rethrow_exception(e);
+			        } catch(cl::sycl::exception const& e) {
+				std::cout << "Unexpected exception caught during asynchronous operation:\n" << e.what() << std::endl;
+				std::terminate();
+			        }
+		        }
+	        }; 
+
+                //select device
+                sycl::queue queue_device{sycl::gpu_selector{}, async_error_handler};
+		
+		// Print out device information
+                std::cout << "DEVICE = "
+                          << queue_device.get_device().get_info<sycl::info::device::name>()
+                          << '\n' << std::endl;
+		
                 // dynamically allocate arrays
                 // std::vector is a sequence container that houses dynamically sized arrays
                 std::vector<char> a(N);
@@ -60,27 +80,7 @@ int main()
                         std::cout << "Could not allocate memoryto vector b!\n" << std::endl;
                         std::cout << "NULL CONTAINER FOUND IN main function()! Exiting...\n" << std::endl;
                         exit(EXIT_FAILURE);
-                }
-                
-                // Asynchronous error handler
-	        auto async_error_handler = [&] (cl::sycl::exception_list exceptions) {
-		        for (auto const& e : exceptions) {
-			        try{
-				        std::rethrow_exception(e);
-			        } catch(cl::sycl::exception const& e) {
-				std::cout << "Unexpected exception caught during asynchronous operation:\n" << e.what() << std::endl;
-				std::terminate();
-			        }
-		        }
-	        }; 
-
-                //select device
-                sycl::queue queue_device{sycl::gpu_selector{}, async_error_handler};
-
-                // Print out device information
-                std::cout << "DEVICE = "
-                          << queue_device.get_device().get_info<sycl::info::device::name>()
-                          << '\n' << std::endl;
+		}
 
                 // create buffers for data object that needs to be used on the device
                 // here buffers have been created from pointer data
