@@ -50,6 +50,11 @@ int main()
 
                 // select device
                 sycl::queue queue_device{sycl::gpu_selector{}, async_error_handler};
+		
+		// Print out device information
+                std::cout << "DEVICE = "
+                          << queue_device.get_device().get_info<sycl::info::device::name>()
+                          << '\n' << std::endl;
 
                 // dynamically allocate arrays
                 char *a = (char*)malloc(N * sizeof(char));
@@ -73,12 +78,7 @@ int main()
                         std::cout << "main::array b is NULL! Exiting...\n" << std::endl;
                         exit(EXIT_FAILURE);
                 }
-
-                // Print out device information
-                std::cout << "DEVICE = "
-                          << queue_device.get_device().get_info<sycl::info::device::name>()
-                          << '\n' << std::endl;
-
+		
                 // Fill array on host with string value
                 for(int i = 0; i < N; i++)
                 {
