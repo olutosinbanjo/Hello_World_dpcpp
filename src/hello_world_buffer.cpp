@@ -1,4 +1,22 @@
-/**************************
+/*
+#                      Hello World! DPC++
+#
+# Copyright 2022 Oluwatosin Odubanjo
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+*/
+
+/**************************************************************************
  *
  * HELLO WORLD in DPC++ -
  *
@@ -6,12 +24,8 @@
  *
  * Buffers from pointer data
  *
- * @ author: Oluwatosin Odubanjo
- *
- * @date: May 16, 2022
- *
- * @time: 10:30pm
- * ************************/
+ * *************************************************************************/
+
 #include <CL/sycl.hpp>
 
 
@@ -19,10 +33,23 @@ int main()
 {
         try
         {
+                // size of array
                 const int N{ 12 };
+                
+                // Asynchronous error handler
+	        auto async_error_handler = [&] (cl::sycl::exception_list exceptions) {
+		        for (auto const& e : exceptions) {
+			        try{
+				        std::rethrow_exception(e);
+			        } catch(cl::sycl::exception const& e) {
+				std::cout << "Unexpected exception caught during asynchronous operation:\n" << e.what() << std::endl;
+				std::terminate();
+			        }
+		        }
+	        }; 
 
                 // select device
-                sycl::queue queue_device{sycl::gpu_selector{}};
+                sycl::queue queue_device{sycl::gpu_selector{}, async_error_handler};
 
                 // dynamically allocate arrays
                 char *a = (char*)malloc(N * sizeof(char));
@@ -35,7 +62,7 @@ int main()
                 memset(a, 0, N);
                 }else{
                         std::cout << "Could not allocate memory!\n" << std::endl;
-                        std::cout << "Array a is NULL! Exiting...\n" << std::endl;
+                        std::cout << "main::array a is NULL! Exiting...\n" << std::endl;
                         exit(EXIT_FAILURE);
                 }
 
@@ -43,10 +70,9 @@ int main()
                 memset(b, 0, N);
                 }else{
                         std::cout << "Could not allocate memory!\n" << std::endl;
-                        std::cout << "Array b is NULL! Exiting...\n" << std::endl;
+                        std::cout << "main::array b is NULL! Exiting...\n" << std::endl;
                         exit(EXIT_FAILURE);
                 }
-                */
 
                 // Print out device information
                 std::cout << "DEVICE = "
@@ -107,9 +133,10 @@ int main()
                 //free allocated memory
                 free(a);
                 free(b);
-
+                
+        // synchronous error handler
         }catch(sycl::exception const &e) {
-                std::cout << e.what() << std::endl;
+                std::cout << "Unexpected exception caught during synchronous operation:\n" << e.what() << std::endl;
                 std::terminate();
         }
 
