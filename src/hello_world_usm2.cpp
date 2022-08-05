@@ -48,8 +48,8 @@ int main()
 	        }; 
 
                 // select device
-                sycl::queue queue_host{sycl::host_selector{}, async_error_handler};
-                sycl::queue queue_gpu{sycl::gpu_selector{}, async_error_handler};
+                sycl::queue queue_host{sycl::host_selector(), async_error_handler};
+                sycl::queue queue_gpu{sycl::gpu_selector(), async_error_handler};
                 
                 // print device information
                 std::cout << "HOST DEVICE = "
