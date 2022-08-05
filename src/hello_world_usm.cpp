@@ -33,6 +33,7 @@ int main()
 {
         try
         {
+		// size of array
                 const int N{ 12 };
                 
                 // Asynchronous error handler
