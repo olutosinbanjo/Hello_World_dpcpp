@@ -49,7 +49,7 @@ int main()
 	        }; 
 
                 // select device
-                sycl::queue queue_device{sycl::gpu_selector{}, async_error_handler};
+                sycl::queue queue_device{sycl::gpu_selector(), async_error_handler};
                 
                 // Print out device information
                 std::cout << "DEVICE = "
