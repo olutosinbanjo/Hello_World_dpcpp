@@ -37,11 +37,11 @@ int main()
                 const int N{ 12 };
                 
                 // Asynchronous error handler
-	        auto async_error_handler = [&] (cl::sycl::exception_list exceptions) {
+	        auto async_error_handler = [&] (sycl::exception_list exceptions) {
 		        for (auto const& e : exceptions) {
 			        try{
 				        std::rethrow_exception(e);
-			        } catch(cl::sycl::exception const& e) {
+			        } catch(sycl::exception const& e) {
 				std::cout << "Unexpected exception caught during asynchronous operation:\n" << e.what() << std::endl;
 				std::terminate();
 			        }
