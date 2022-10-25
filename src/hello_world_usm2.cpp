@@ -116,7 +116,7 @@ int main()
                                         int i = idx[0];
                                         b[i] = a[i];
                                         });
-                                });
+                                }).wait();
                 }
 
                 //since memory of array b is allocated is with malloc_device
