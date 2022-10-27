@@ -98,8 +98,16 @@ int main()
 
                 // create buffers for data object that needs to be used on the device
                 // here buffers have been created from pointer data
-                sycl::buffer<char, 1> a_buffer(a, sycl::range<1>(N));
-                sycl::buffer<char, 1> b_buffer(b, sycl::range<1>(N));
+		sycl::buffer a_buffer{a, sycl::range{N}};
+                sycl::buffer b_buffer{b, sycl::range{N}};
+		
+		// Can also be written as
+		
+		//sycl::buffer a_buffer(a, sycl::range<1>(N));
+                //sycl::buffer b_buffer(b, sycl::range<1>(N));
+		
+                //sycl::buffer<char, 1> a_buffer(a, sycl::range<1>(N));
+                //sycl::buffer<char, 1> b_buffer(b, sycl::range<1>(N));
 
                 // define kernel to do array copy on selected device
                 sycl::range<1> size{N};
