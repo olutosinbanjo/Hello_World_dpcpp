@@ -16,15 +16,15 @@
 #     Finally, the data of the receiver array, b is copied into the copy array, c using a memory copy operation, and data of array c is printed on the host device.
 */
 
-/*********************************************************************
+/*************************************************************************
  *
  * HELLO WORLD in DPC++
  *
  * ARRAY COPY WITH ASSIGNMENT OPERATOR (=) AND MEMORY COPY
  *
- * Unified Shared Memory - Heterogeneous
+ * Unified Shared Memory Approach Illustrating Heterogeneous Programming
  *
- * *******************************************************************/
+ * ***********************************************************************/
 
 #include <CL/sycl.hpp>
 
