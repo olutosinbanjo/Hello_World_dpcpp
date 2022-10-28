@@ -1,28 +1,28 @@
 /*
 #                      Hello World! DPC++
 #
-# Copyright 2022 Oluwatosin Odubanjo
+#     Copyright (c) 2022 Oluwatosin Odubanjo
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+#     SPDX-License-Identifier: MIT
+# 
+*/
+
+/*    
+#     This program illustrates heterogeneous programming and makes use of the unified shared memory (usm) style for data and memory management.
+#     It illustrates the three modes of usm allocation malloc_shared, malloc_device and malloc_host.
+#     It features allocated arrays, a, b and c, the sender array, receiver array and copy array, respectively.
+# 
+#     On a selected device, the data of the sender array, a is copied into the receiver array, b, using the assignment operator, =.
+#     Finally, the data of the receiver array, b is copied into the copy array, c using a memory copy operation, and data of array c is printed on the host device.
 */
 
 /*********************************************************************
  *
  * HELLO WORLD in DPC++
  *
- * using ARRAY COPY - copy the contents of one array to another
+ * ARRAY COPY WITH ASSIGNMENT OPERATOR (=) AND MEMORY COPY
  *
- * Unified Shared Memory - (more control)
+ * Unified Shared Memory - Heterogeneous
  *
  * *******************************************************************/
 
