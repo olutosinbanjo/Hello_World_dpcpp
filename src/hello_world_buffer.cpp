@@ -19,7 +19,7 @@
  *
  *  HELLO WORLD in DPC++ -
  *
- *  ARRAY COPY WITH ASSIGNMENT OPERATOR (=)
+ *  1D-ARRAY COPY WITH ASSIGNMENT OPERATOR (=)
  *
  *  Buffer Approach to Illustrate Homogeneous Programming
  * (Buffers are created from host pointer data).
