@@ -7,13 +7,13 @@
 # 
 */
 
-/*    This program illustrates homogeneous programming and makes use of the unified shared memory (usm) style for data and memory management.
+/*    
+#     This program illustrates homogeneous programming and makes use of the unified shared memory (usm) style for data and memory management.
 #     It illustrates one of the three modes of usm allocation - malloc_shared.
 #     It features two dynamically allocated arrays, a and b, the sender and receiver array respectively.
 # 
 #     On a selected device, the data of the sender array,a, is copied into the receiver array, b, using the assignment operator, =.
 #     Finally, the data of the receiver array,b, is printed on the host device.
-#     
 */
 
 
