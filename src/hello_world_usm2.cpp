@@ -20,7 +20,7 @@
  *
  * HELLO WORLD in DPC++
  *
- * ARRAY COPY WITH ASSIGNMENT OPERATOR (=) AND MEMORY COPY
+ * 1D-ARRAY COPY WITH ASSIGNMENT OPERATOR (=) AND MEMORY COPY
  *
  * Unified Shared Memory Approach Illustrating Heterogeneous Programming
  *
