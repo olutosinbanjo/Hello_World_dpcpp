@@ -1,28 +1,28 @@
 /*
 #                      Hello World! DPC++
 #
-# Copyright 2022 Oluwatosin Odubanjo
+#     Copyright (c) 2022 Oluwatosin Odubanjo
 #
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+#     SPDX-License-Identifier: MIT
+# 
+*/
+
+/*    This program illustrates homogenous programming and makes use of the Buffer style for data and memory management.
+#     In this program, on the host device buffer objects are created from dynamically allocated arrays, 
+#     host pointer a and host pointer b - the sender array and receiver array, respectively.
+#     Then on a selected device, data of the sender buffer object as well as the receiver buffer object is accessed with accessor objects. 
+#     Furthermore, data in the sender accessor object is then copied into the receiver accessor object using the assignment operator, =. 
+#     Finally, data of the receiver accessor object, is accessed via a host accessor and then printed on the host device. 
 */
 
 /**************************************************************************
  *
- * HELLO WORLD in DPC++ -
+ *  HELLO WORLD in DPC++ -
  *
- * ARRAY COPY
+ *  ARRAY COPY WITH ASSIGNMENT OPERATOR (=)
  *
- * Buffers from pointer data
+ *  Buffer Approach to Illustrate Homogeneous Programming
+ * (Buffers are created from host pointer data).
  *
  * *************************************************************************/
 
