@@ -7,7 +7,7 @@
 # 
 */
 
-/*    This program illustrates homogenous programming and makes use of the Buffer style for data and memory management.
+/*    This program illustrates homogeneous programming and makes use of the Buffer style for data and memory management.
 #     In this program, on the host device buffer objects are created from dynamically allocated arrays, 
 #     host pointer a and host pointer b - the sender array and receiver array, respectively.
 #     Then on a selected device, data of the sender buffer object as well as the receiver buffer object is accessed with accessor objects. 
