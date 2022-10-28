@@ -23,7 +23,7 @@
  *
  * ARRAY COPY WITH ASSIGNMENT OPERATOR (=)
  *
- * Unified Shared Memory
+ * Unified Shared Memory Approach Illustrating Heterogeneous Programming
  *
  * ************************************************************************/
 
