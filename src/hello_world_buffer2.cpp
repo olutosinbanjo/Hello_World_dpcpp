@@ -56,7 +56,7 @@ int main()
                           << queue_device.get_device().get_info<sycl::info::device::name>()
                           << '\n' << std::endl;
 		
-                // dynamically allocate arrays
+                // create dynamically sized arrays
                 // std::vector is a sequence container that houses dynamically sized arrays
                 std::vector<char> a(N);
                 std::vector<char> b(N);
