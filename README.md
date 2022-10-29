@@ -162,8 +162,6 @@ Suggested reading sequence -
 
 10.2.5. Accessing Device Data On Host Device 
 
-10.2.6. Freeing Allocated Memory
-
 
 7.3. Expected Result
 
