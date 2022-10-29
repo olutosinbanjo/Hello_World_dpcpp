@@ -50,7 +50,7 @@ A basic DPC++ tutorial. Head out to [https://github.com/olutosinbanjo/Hello_Worl
 
 ## The Basic Structure of a DPCPP Program 1
 
-4.0. Basic structure of a DPC++ program
+4.0. Basic structure of a DPC++ Program - Part 1
 
 4.1. Header File and Namespace
 
@@ -64,21 +64,48 @@ A basic DPC++ tutorial. Head out to [https://github.com/olutosinbanjo/Hello_Worl
 
 ## The Basic Structure of a DPCPP Program 2
 
-4.6. Device Management
+5.0. Basic Structure of a DPC++ Program - Part 2
 
-4.7. Memory and Data Management
+5.1. Device Management
 
-4.8. Kernel-based Programming
+5.2. Memory and Data Management
 
-4.9. Synchronization
+5.3. Kernel-based Programming
+
+5.4. Synchronization
 
 ## The Basic Structure of a DPCPP Program 3
 
-5.0. Error Handling
+6.0. Basic Structure of a DPC++ Program - Part 3
 
-5.1. Compiling and Executing a DPC++ Program
+6.1. Error Handling
+
+6.2. Compiling and Executing a DPC++ Program
 
 ## Source Code Explanation 1
+
+7.0 src/hello_world_usm.cpp
+
+7.1. Preprocessor Directives
+
+7.2. The main Function
+
+7.2.1. Error Handling
+
+7.2.2. Device Selection and Information 
+
+7.2.3. Setting Up Host Storage 
+
+7.2.4. Device Code Computation 
+
+7.2.5. Accessing Device Data On Host Device 
+
+7.2.6. Freeing Allocated Memory
+
+
+7.3. Expected Result
+
+
 
 
 
