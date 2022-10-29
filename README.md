@@ -12,6 +12,8 @@ A basic DPC++ tutorial. Head out to [https://github.com/olutosinbanjo/Hello_Worl
 
 # Contents
 
+Suggested reading sequence - 
+
 ## Home
 
 1.0. Hello World! DPC++
@@ -101,6 +103,66 @@ A basic DPC++ tutorial. Head out to [https://github.com/olutosinbanjo/Hello_Worl
 7.2.5. Accessing Device Data On Host Device 
 
 7.2.6. Freeing Allocated Memory
+
+## Source Code Explanation 2
+
+8.0 src/hello_world_usm2.cpp
+
+8.1. Preprocessor Directives
+
+8.2. The main Function
+
+8.2.1. Error Handling
+
+8.2.2. Device Selection and Information 
+
+8.2.3. Setting Up Host Storage 
+
+8.2.4. Device Code Computation 
+
+8.2.5. Accessing Device Data On Host Device 
+
+8.2.6. Freeing Allocated Memory
+
+## Source Code Explanation 3
+
+9.0 src/hello_world_buffer.cpp
+
+9.1. Preprocessor Directives
+
+9.2. The main Function
+
+9.2.1. Error Handling
+
+9.2.2. Device Selection and Information 
+
+9.2.3. Setting Up Host Storage 
+
+9.2.4. Device Code Computation 
+
+9.2.5. Accessing Device Data On Host Device 
+
+9.2.6. Freeing Allocated Memory
+
+## Source Code Explanation 4
+
+10.0 src/hello_world_buffer2.cpp
+
+10.1. Preprocessor Directives
+
+10.2. The main Function
+
+10.2.1. Error Handling
+
+10.2.2. Device Selection and Information 
+
+10.2.3. Setting Up Host Storage 
+
+10.2.4. Device Code Computation 
+
+10.2.5. Accessing Device Data On Host Device 
+
+10.2.6. Freeing Allocated Memory
 
 
 7.3. Expected Result
