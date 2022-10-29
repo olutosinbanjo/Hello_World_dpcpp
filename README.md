@@ -162,11 +162,14 @@ Suggested reading sequence -
 
 10.2.5. Accessing Device Data On Host Device 
 
+10.3. Expected Result
 
-7.3. Expected Result
+## Exercises to Try
 
+## Final Words
 
+## References
 
+## Extra Reading Materials and Tutorials
 
-
-References
+😃 HAPPY LEARNING! 😃
