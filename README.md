@@ -170,6 +170,6 @@ Suggested reading sequence -
 
 ## References
 
-## Additional Reading Resources
+## Additional Study Resources
 
 😃 HAPPY LEARNING! 😃
