@@ -8,19 +8,22 @@ DPCPP_FLAGS = -fsycl -fsycl-unnamed-lambda -fsycl-device-code-split=per_kernel
 EXEC1 = usm
 EXEC2 = usm2 
 EXEC3 = buf
-EXEC4 = buf2
+EXEC4 = buf_
+EXEC5 = buf2
 
 # SOURCE FILES
 SRC1 = src/hello_world_usm.cpp
 SRC2 = src/hello_world_usm2.cpp
 SRC3 = src/hello_world_buffer.cpp
-SRC4 = src/hello_world_buffer2.cpp
+SRC4 = src/hello_world_buffer.cc
+SRC5 = src/hello_world_buffer2.cpp
 
 build:
 	$(CXX) $(DPCPP_FLAGS) -o $(EXEC1) $(SRC1) 
 	$(CXX) $(DPCPP_FLAGS) -o $(EXEC2) $(SRC2) 
 	$(CXX) $(DPCPP_FLAGS) -o $(EXEC3) $(SRC3) 
 	$(CXX) $(DPCPP_FLAGS) -o $(EXEC4) $(SRC4)
+	$(CXX) $(DPCPP_FLAGS) -o $(EXEC5) $(SRC5)
 
 clean:
-	rm -i $(EXEC1) $(EXEC2) $(EXEC3) $(EXEC4)	
+	rm -i $(EXEC1) $(EXEC2) $(EXEC3) $(EXEC4) $(EXEC5)	
