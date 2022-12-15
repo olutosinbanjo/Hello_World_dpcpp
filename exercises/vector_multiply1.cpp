@@ -89,7 +89,7 @@ int main()
                                 sycl::accessor c_accessor{c_buffer, h, sycl::write_only};
                                 h.parallel_for(size, [=](sycl::id<1> idx) {
                                         int i = idx[0];
-                                        c_accessor[i] = a_accessor[i] *buffer b_accessor[i];
+                                        c_accessor[i] = a_accessor[i] * b_accessor[i];
                                         });
                                 });
                 }
