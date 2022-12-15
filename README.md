@@ -104,6 +104,8 @@ Suggested reading sequence -
 
 7.2.6. Freeing Allocated Memory
 
+7.3. Expected Result
+
 ## Source Code Explanation 2
 
 8.0 src/hello_world_usm2.cpp
@@ -124,6 +126,8 @@ Suggested reading sequence -
 
 8.2.6. Freeing Allocated Memory
 
+8.3. Expected Result
+
 ## Source Code Explanation 3
 
 9.0 src/hello_world_buffer.cpp
@@ -143,6 +147,8 @@ Suggested reading sequence -
 9.2.5. Accessing Device Data On Host Device 
 
 9.2.6. Freeing Allocated Memory
+
+9.3. Expected Result
 
 ## Source Code Explanation 4
 
